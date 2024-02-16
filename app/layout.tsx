@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { MainNavbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: {
@@ -46,13 +47,16 @@ export default function RootLayout({
             <MainNavbar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
+              <Analytics />
             </main>
             <footer className="w-full flex items-center justify-center py-3 footer">
               <Link
                 className="flex items-center gap-1 text-current"
                 title="Frey"
               >
-                <span className="text-default-500">© Algunos derechos reservados</span>
+                <span className="text-default-500">
+                  © Algunos derechos reservados
+                </span>
                 <p className="text-primary">Fco-GT</p>
               </Link>
             </footer>
