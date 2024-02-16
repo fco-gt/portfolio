@@ -2,9 +2,21 @@ import { title, subtitle } from "@/components/primitives";
 import { Image, Card, CardFooter, Button } from "@nextui-org/react";
 import NextImage from "next/image";
 
-import { DiJavascript1, DiNodejs, DiMongodb, DiReact, DiHtml5, DiCss3, DiPython } from "react-icons/di";
+import {
+  DiJavascript1,
+  DiNodejs,
+  DiMongodb,
+  DiReact,
+  DiHtml5,
+  DiCss3,
+  DiPython,
+} from "react-icons/di";
 import { SiExpress } from "react-icons/si";
-import { TbBrandNextjs, TbBrandTypescript, TbFileTypeSql } from "react-icons/tb";
+import {
+  TbBrandNextjs,
+  TbBrandTypescript,
+  TbFileTypeSql,
+} from "react-icons/tb";
 
 export default function page() {
   return (
@@ -52,7 +64,7 @@ export default function page() {
           </p>
           <div className="pt-5 text-center">
             <h2 className={title({ color: "green", size: "xl" })}>
-              "¿Un día? mejor día uno"
+              {`"¿Un día? mejor día uno"`}
             </h2>
           </div>
         </div>
@@ -71,38 +83,93 @@ export default function page() {
           <h2 className={title({ color: "green" })}>Habilidades</h2>
         </div>
         <div className="skills-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 justify-items-center items-center mt-11">
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <DiJavascript1 className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <DiJavascript1 className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <DiNodejs className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <DiNodejs className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <SiExpress className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <SiExpress className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <DiMongodb className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <DiMongodb className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <DiReact className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <DiReact className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <TbBrandNextjs className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <TbBrandNextjs className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <DiHtml5 className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <DiHtml5 className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <DiCss3 className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <DiCss3 className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <TbBrandTypescript className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <TbBrandTypescript className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <TbFileTypeSql className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <TbFileTypeSql className="skills-icon" />
           </Card>
-          <Card isBlurred isPressable radius="lg" className="p-[59px] skill-card">
-            <DiPython className="skills-icon"/>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <DiPython className="skills-icon" />
           </Card>
         </div>
       </section>
