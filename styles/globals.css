@@ -3,52 +3,79 @@
 @tailwind utilities;
 
 body {
-    padding: 0;
-    margin: 0;
-    overflow: scroll;
-    overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .navItem {
-    transition: border-bottom 0.3s all;
-    margin-left: 5px;
+  --b: 0.1em; /* the thickness of the line */
+  --c: #00ff15; /* the color */
+
+  color: #0000;
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, #000 0) 0%
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+      no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear,
+    background-size 0.3s calc(0.3s - var(--_s, 0s));
 }
 
 .navItem:hover {
-    border-bottom: 1px solid #61FF00;
+  --_p: 100%;
+  --_s: 0.3s;
 }
 
 .social-media ul li {
-    padding: 9px;
-    margin-left: 19px;
-    background-color: #888888;
-    border-radius: 100%;
-    transition: box-shadow 0.9s;
+  padding: 9px;
+  margin-left: 19px;
+  background-color: #888888;
+  border-radius: 100%;
+  transition: box-shadow 0.9s;
 }
 
 .social-media ul li:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 29px 0px rgba(30,255,0,1);
+  cursor: pointer;
+  box-shadow: 0px 0px 29px 0px rgba(30, 255, 0, 1);
 }
 
 .footer {
-    margin-top: 19px;
-    background-color: #0f0f0f;
+  margin-top: 19px;
+  background-color: #0f0f0f;
 }
 
 .nav-icon {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .text-about {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .skill-card {
-    border: 2px solid #1e4e00;
-    box-shadow: 0px 0px 9px 0px rgba(0,255,30,1);
+  border: 2px solid #1e4e00;
+  box-shadow: 0px 0px 9px 0px rgba(0, 255, 30, 1);
 }
 
 .skills-icon {
-    font-size: 92px;
+  font-size: 92px;
+}
+
+.projects-cards {
+  --s: 250px; /* the size of the image */
+  --b: 5px; /* the border thickness*/
+  --g: 14px; /* the gap */
+  --c: #00ca1b; /* the color */
+  outline-offset: calc(var(--s) / -2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.projects-cards:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
 }

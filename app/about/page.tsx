@@ -1,6 +1,6 @@
 import { title, subtitle } from "@/components/primitives";
 import { Image, Card, CardFooter, Button } from "@nextui-org/react";
-import NextImage from "next/image";
+import nextImage from "next/image";
 
 import {
   DiJavascript1,
@@ -70,9 +70,11 @@ export default function page() {
         </div>
         <div className="hidden sm:flex pl-7">
           <Image
+            as={nextImage}
             width={290}
+            height={290}
             alt="FCO-GT Icon"
-            src="https://cdn.discordapp.com/attachments/1002676177036656641/1206016726693707776/mamkeke.jpg?ex=65da799a&is=65c8049a&hm=1e5f29926f34591b3bc49d8834ca10460b0397315a6a7af7fe4942522f4e9469&"
+            src="/images/mamkeke.jpg"
             className="rounded-full"
           ></Image>
         </div>

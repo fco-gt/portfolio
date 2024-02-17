@@ -34,11 +34,7 @@ export function MainNavbar() {
     },
     {
       label: "Projects",
-      href: "/resume",
-    },
-    {
-      label: "Resume",
-      href: "/resume",
+      href: "/projects",
     },
   ];
 
@@ -72,13 +68,8 @@ export function MainNavbar() {
           </Link>
         </NavbarItem>
         <NavbarItem className="navItem">
-          <Link color="foreground" href="/resume">
+          <Link color="foreground" href="/projects">
             <BracketsAngle size={29} className="nav-icon" /> <h2>Projects</h2>
-          </Link>
-        </NavbarItem>
-        <NavbarItem className="navItem">
-          <Link color="foreground" href="/resume">
-            <Book size={29}  className="nav-icon" /> <h2>Resume</h2>
           </Link>
         </NavbarItem>
       </NavbarContent>

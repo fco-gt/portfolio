@@ -58,6 +58,7 @@ export default function RootLayout({
                   © Algunos derechos reservados
                 </span>
                 <p className="text-primary">Fco-GT</p>
+                <br />
               </Link>
             </footer>
           </div>

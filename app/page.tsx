@@ -10,10 +10,14 @@ import {
 import { title, subtitle } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { Image } from "@nextui-org/react";
+import nextImage from "next/image";
 
 import TextWrite from "@/components/TextWrite";
-import { GithubLogo, LinkedinLogo, InstagramLogo } from "@phosphor-icons/react/dist/ssr";
-
+import {
+  GithubLogo,
+  LinkedinLogo,
+  InstagramLogo,
+} from "@phosphor-icons/react/dist/ssr";
 
 export default function Home() {
   return (
@@ -33,45 +37,80 @@ export default function Home() {
 
         <div className="hidden sm:flex">
           <Image
+            as={nextImage}
             width={550}
+            height={550}
             alt="Code Image"
-            src="https://cdn.discordapp.com/attachments/1009541174652055563/1199889383084535849/bg-img.png?ex=65c42f11&is=65b1ba11&hm=3395d3d9276c2d29c9bd624db6a9df7cdb9985ce9efd97518800fa8641ec21ad&"
+            src="/images/home-image-1.svg"
           ></Image>
         </div>
       </section>
 
-      <section className="flex justify-between p-5">
+      <section className="flex justify-between p-11">
         <div className="flex-1">
           <div className="text-center pb-9">
             <h2 className={title({ size: "md" })}>Un poco de mi</h2>
           </div>
           <p className="text-xl">
-            Soy un apasionado de la programacion Web y me gusta aprender nuevas tecnologias
+            Soy un apasionado de la programacion Web y me gusta aprender nuevas
+            tecnologias
             <br />
             <br />
-            Programo en Javascript pero tambien me gusta aprender otros lenguajes. <i><b className={title({ color: "green", size: "xl" })}>Soy muy curioso...</b></i>
+            Programo en Javascript pero tambien me gusta aprender otros
+            lenguajes.{" "}
+            <i>
+              <b className={title({ color: "green", size: "xl" })}>
+                Soy muy curioso...
+              </b>
+            </i>
             <br />
             <br />
-            Me dedico a crear/programar bots de Discord para servidores publicos y privados<br />
-            Tambien tengo mi propio bot de Discord llamado <i><b className={title({ color: "green", size: "xl" })}>Mankekito</b></i>
+            Me dedico a crear/programar bots de Discord para servidores publicos
+            y privados
+            <br />
+            Tambien tengo mi propio bot de Discord llamado{" "}
+            <i>
+              <b className={title({ color: "green", size: "xl" })}>Mankekito</b>
+            </i>
           </p>
         </div>
         <div className="hidden sm:flex pl-5">
           <Image
+            as={nextImage}
             width={290}
             alt="FCO-GT Icon"
-            src="https://cdn.discordapp.com/attachments/1002676177036656641/1206016726693707776/mamkeke.jpg?ex=65da799a&is=65c8049a&hm=1e5f29926f34591b3bc49d8834ca10460b0397315a6a7af7fe4942522f4e9469&"
+            src="/images/home-image-2.svg"
             className="rounded-full"
+            height={250}
           ></Image>
         </div>
       </section>
-      
+
       <div className="text-center items-center pt-5 social-media">
         <h2 className={title({ color: "green", size: "md" })}>Mis Redes</h2>
+        <b className={subtitle()}>Contactame tambien mediante mi correo:</b>
+        <a href="mailto:fco.gutierrez1227@gmail.com" target="_blank">
+          fco.gutierrez1227@gmail.com
+        </a>
         <ul className="flex items-center text-center justify-center pt-5 mr-5">
-          <li><a href=""></a><GithubLogo size={29} /></li>
-          <li><a href=""></a><LinkedinLogo size={29} /></li>
-          <li><a href=""></a><InstagramLogo size={29} /></li>
+          <li>
+            <a href="https://github.com/fco-gt" target="_blank">
+              <GithubLogo size={29} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/francisco-guti%C3%A9rrez-1b7580254/"
+              target="_blank"
+            >
+              <LinkedinLogo size={29} />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/fco_gt.wav/" target="_blank">
+              <InstagramLogo size={29} />
+            </a>
+          </li>
         </ul>
       </div>
     </div>
