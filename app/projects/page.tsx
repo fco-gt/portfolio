@@ -59,10 +59,9 @@ export default function page() {
           <CardFooter className="flex text-center justify-center items-center justify-items-center flex-col">
             <b className="text-2xl">Mankekito Discord Bot</b>
             <p className="text-default-500 mt-2">
-              Mankekito es un bot publico que se basa inicialmente en
-              comunidades de habla hispna. Este fue creado con sugerencias de
-              varias comunidades las cuales fueron fundamentales para la
-              creacion de este.
+              Mankekito es un bot que se basa en varias comunidades de habla hispana. Este fue creado con sugerencias de varias
+              comunidades las cuales fueron fundamentales para la creacion de
+              este.
             </p>
             <div className="flex items-center justify-center justify-items-center mt-5 gap-5">
               <Link
