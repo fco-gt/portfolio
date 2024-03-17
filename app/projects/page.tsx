@@ -38,6 +38,7 @@ export default function page() {
           Estos son algunos projectos que he hecho de manera autonoma
         </p>
       </section>
+
       <section className="projects-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center items-center mt-12 mb-5">
         <Card
           isBlurred
@@ -58,10 +59,10 @@ export default function page() {
           <CardFooter className="flex text-center justify-center items-center justify-items-center flex-col">
             <b className="text-2xl">Mankekito Discord Bot</b>
             <p className="text-default-500 mt-2">
-              Mankekito es un bot publico que sebasa inicialmente en comunidades
-              de habla hispna. Este fue creado con sugerencias de varias
-              comunidades las cuales fueron fundamentales para la creacion de
-              este.
+              Mankekito es un bot publico que se basa inicialmente en
+              comunidades de habla hispna. Este fue creado con sugerencias de
+              varias comunidades las cuales fueron fundamentales para la
+              creacion de este.
             </p>
             <div className="flex items-center justify-center justify-items-center mt-5 gap-5">
               <Link
@@ -83,6 +84,53 @@ export default function page() {
                   startContent={<BsRobot />}
                 >
                   Top.gg
+                </Button>
+              </Link>
+            </div>
+          </CardFooter>
+        </Card>
+
+        <Card
+          isBlurred
+          className="px-5 projects-cards w-full h-full"
+          shadow="sm"
+        >
+          <CardHeader className="flex gap-2">
+            {nextjsTT()} {javascriptTT()} {typescriptTT()} {mongodbTT()}{" "}
+            {tailwindcssTT()}
+          </CardHeader>
+          <CardBody className="justify-center items-center">
+            <Image
+              alt="Card BG"
+              radius="lg"
+              className="object-cover"
+              src="https://i.imgur.com/GVPncVC.png"
+            />
+          </CardBody>
+          <CardFooter className="flex text-center justify-center items-center justify-items-center flex-col">
+            <b className="text-2xl">GT-Links</b>
+            <p className="text-default-500 mt-2">
+              GT-Links es un proyecto tipo muestra simple de lo que seria un
+              acortador de URLs. En este proyecto me base en una metodologia mas
+              ligada a lo FullStack utilizando API REST
+            </p>
+            <div className="flex items-center justify-center justify-items-center mt-5 gap-5">
+              <Link isExternal href="https://github.com/fco-gt/gt-links">
+                <Button
+                  color="success"
+                  variant="bordered"
+                  startContent={<FaGithub />}
+                >
+                  Repositorio
+                </Button>
+              </Link>
+              <Link isExternal href="https://gt-links.vercel.app/">
+                <Button
+                  color="success"
+                  variant="bordered"
+                  startContent={<VscPreview />}
+                >
+                  Mirar
                 </Button>
               </Link>
             </div>

@@ -11,7 +11,7 @@ import {
   DiCss3,
   DiPython,
 } from "react-icons/di";
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiPostman } from "react-icons/si";
 import {
   TbBrandNextjs,
   TbBrandTypescript,
@@ -172,6 +172,14 @@ export default function page() {
             className="p-[59px] skill-card"
           >
             <DiPython className="skills-icon" />
+          </Card>
+          <Card
+            isBlurred
+            isPressable
+            radius="lg"
+            className="p-[59px] skill-card"
+          >
+            <SiPostman className="skills-icon" />
           </Card>
         </div>
       </section>
