@@ -52,7 +52,7 @@ export default function RootLayout({
             <footer className="w-full flex items-center justify-center py-3 footer">
               <Link
                 className="flex items-center gap-1 text-current"
-                title="Frey"
+                title="FCO-GT"
               >
                 <span className="text-default-500">
                   © Algunos derechos reservados
