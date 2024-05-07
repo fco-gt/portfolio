@@ -25,7 +25,7 @@ export const javascriptTT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};
 
 export const nodejsTT = () => {
   return (
@@ -41,7 +41,7 @@ export const nodejsTT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};
 
 export const mongodbTT = () => {
   return (
@@ -57,7 +57,7 @@ export const mongodbTT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};
 
 export const reactTT = () => {
   return (
@@ -73,7 +73,7 @@ export const reactTT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};
 
 export const nextjsTT = () => {
   return (
@@ -89,7 +89,7 @@ export const nextjsTT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};
 
 export const typescriptTT = () => {
   return (
@@ -105,7 +105,7 @@ export const typescriptTT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};
 
 export const tailwindcssTT = () => {
   return (
@@ -121,7 +121,7 @@ export const tailwindcssTT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};
 
 export const html5TT = () => {
   return (
@@ -137,7 +137,7 @@ export const html5TT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};
 
 export const css3TT = () => {
   return (
@@ -153,4 +153,4 @@ export const css3TT = () => {
       </Chip>
     </Tooltip>
   );
-}
+};

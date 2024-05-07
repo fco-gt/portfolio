@@ -49,15 +49,16 @@ export default function Home() {
       <section className="flex justify-between p-11">
         <div className="flex-1">
           <div className="text-center pb-9">
-            <h2 className={title({ size: "md" })}>Un poco de mi</h2>
+            <h2 className={title({ size: "md" })}>Un poco de mí</h2>
           </div>
           <p className="text-xl">
-            Soy un apasionado de la programacion Web y me gusta aprender nuevas
-            tecnologias
+            Soy desarrollador web Full Stack y me gusta aprender nuevas
+            tecnologías en base a mi experiencia en el desarrollo de software y
+            a mi curiosidad por aprender cosas nuevas.
             <br />
             <br />
-            Programo en Javascript pero tambien me gusta aprender otros
-            lenguajes.{" "}
+            Programo en JavaScript, pero también me gusta aprender otros
+            lenguajes.
             <i>
               <b className={title({ color: "green", size: "xl" })}>
                 Soy muy curioso...
@@ -65,10 +66,8 @@ export default function Home() {
             </i>
             <br />
             <br />
-            Me dedico a crear/programar bots de Discord para servidores publicos
-            y privados
-            <br />
-            Tambien tengo mi propio bot de Discord llamado{" "}
+            Me dedico a desarrollar aplicaciones web y también tengo un mi
+            propio bot de Discord publico llamado{" "}
             <i>
               <b className={title({ color: "green", size: "xl" })}>Mankekito</b>
             </i>
@@ -89,7 +88,11 @@ export default function Home() {
       <div className="text-center items-center pt-5 social-media">
         <h2 className={title({ color: "green", size: "md" })}>Mis Redes</h2>
         <b className={subtitle()}>Contactame tambien mediante mi correo:</b>
-        <a href="mailto:fco.gutierrez1227@gmail.com" target="_blank">
+        <a
+          href="mailto:fco.gutierrez1227@gmail.com"
+          target="_blank"
+          className="text-green-500"
+        >
           fco.gutierrez1227@gmail.com
         </a>
         <ul className="flex items-center text-center justify-center pt-5 mr-5">

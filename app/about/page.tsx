@@ -27,40 +27,34 @@ export default function page() {
             <h2 className={title({ size: "md" })}>Sobre mi</h2>
           </div>
           <p className="text-about text-xl">
-            Hola a todos,{" "}
+            <br />
+            Soy estudiante de Ingeniería Informática en DuocUC y Desarrollador
+            Web Full Stack autónomo.
+            <br />
+            Me apasiona aprender todo lo relacionado con la programación,
+            especialmente el Desarrollo Web.
+            <br />
+            <br />
+            Me adentré en el mundo de la programación desde que era joven,
+            aproximadamente a los 13 años, y hasta ahora no me arrepiento.
+            <br />
+            <br />
+            Desde que conocí JavaScript, me interesé mucho por las posibilidades
+            que ofrecía este lenguaje.
+            <br />
+            <br />
+            Comencé creando un pequeño bot de Discord llamado{" "}
             <strong className={title({ color: "green", size: "xl" })}>
-              soy Francisco.
-            </strong>
-            <br />
-            Soy estudiante de Ingenieria Informatica en DuocUC y Desarrollador
-            Web autonomo.
-            <br />
-            Me gusta y apasiona todo lo relacionado a programacion y sobre todo
-            el Desarrollo Web.
-            <br />
-            <br />
-            Me adentre en el mundo de la programacion desde que era joven,
-            aproximadamente
-            <br />
-            unos 13 años y hasta ahora no me arrepiento de eso.
-            <br />
-            <br />
-            Desde que conoci Javascript me interese mucho por las cosas que
-            podia hacer con este lenguaje.
-            <br />
-            Inicie creando un pequeño{" "}
-            <strong className={title({ color: "green", size: "xl" })}>
-              Bot de Discord llamado Mankekito
+              Mankekito
             </strong>{" "}
-            que si te preguntas ¿que es un Mankekito? (es un dulce de mi pais
-            llamado Mankeke) <br />y actualmente este bot esta en mas de{" "}
+            <br />y actualmente este bot esta en mas de{" "}
             <strong className={title({ color: "green", size: "xl" })}>
               250 servidores y verificado por Discord.
             </strong>
             <br />
             <br />
-            Ahora me adentre en el mundo del Desarrollo Web y espero poder
-            dedicarme con toda pasion a esto.
+            Ahora me estoy adentrando en el mundo del Desarrollo Web y espero
+            poder dedicarme a esto con toda mi pasión.
           </p>
           <div className="pt-5 text-center">
             <h2 className={title({ color: "green", size: "xl" })}>
@@ -82,7 +76,7 @@ export default function page() {
 
       <section className="mt-12">
         <div className="text-center">
-          <h2 className={title({ color: "green" })}>Habilidades</h2>
+          <h2 className={title({ color: "green" })}>Tecnologías</h2>
         </div>
         <div className="skills-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 justify-items-center items-center mt-11">
           <Card
