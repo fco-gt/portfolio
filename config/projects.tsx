@@ -27,6 +27,21 @@ const projects = [
     ],
   },
   {
+    name: "Master Bikes",
+    description: "E-Commerce de una tienda de bicicletas (ficticio)",
+    image: "/images/projects/gt-bikes.png",
+    isPrivate: false,
+    github: "https://github.com/fco-gt/bikes-ecommerce",
+    url: "https://master-bikes.vercel.app",
+    badges: [
+      "nextjsTT",
+      "typescriptTT",
+      "javascriptTT",
+      "tailwindcssTT",
+      "reactTT"
+    ]
+  },
+  {
     name: "GT-Bikes",
     description: "APIREST Para un catalogo de bicicletas",
     image: "/images/projects/gt-bikes.png",
