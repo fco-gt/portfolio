@@ -33,10 +33,7 @@ const projects = [
     isPrivate: false,
     github: "https://github.com/fco-gt/bikes-api",
     url: "https://bikes-api.onrender.com",
-    badges: [
-      "javascriptTT",
-      "nodejsTT",
-    ]
+    badges: ["javascriptTT", "nodejsTT"],
   },
   {
     name: "Spotify Playlist",
