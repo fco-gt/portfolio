@@ -31,7 +31,7 @@ const projects = [
     description: "E-Commerce de una tienda de bicicletas (ficticio)",
     image: "/images/projects/gt-bikes.png",
     isPrivate: false,
-    github: "https://github.com/fco-gt/bikes-ecommerce",
+    github: "https://github.com/fco-gt/master-bikes.png",
     url: "https://master-bikes.vercel.app",
     badges: [
       "nextjsTT",
