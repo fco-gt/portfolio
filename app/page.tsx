@@ -58,7 +58,7 @@ export default function Home() {
             <br />
             <br />
             Programo en JavaScript, pero también me gusta aprender otros
-            lenguajes.
+            lenguajes.{" "}
             <i>
               <b className={title({ color: "green", size: "xl" })}>
                 Soy muy curioso...
