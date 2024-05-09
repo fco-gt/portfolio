@@ -27,6 +27,18 @@ const projects = [
     ],
   },
   {
+    name: "GT-Bikes",
+    description: "APIREST Para un catalogo de bicicletas",
+    image: "/images/projects/gt-bikes.png",
+    isPrivate: false,
+    github: "https://github.com/fco-gt/bikes-api",
+    url: "https://bikes-api.onrender.com",
+    badges: [
+      "javascriptTT",
+      "nodejsTT",
+    ]
+  },
+  {
     name: "Spotify Playlist",
     description: "Web que muestra tus playlists de Spotify",
     image: "/images/projects/spotify-playlists.png",
