@@ -66,7 +66,7 @@ export default function Home() {
             </i>
             <br />
             <br />
-            Me dedico a desarrollar aplicaciones web y también tengo un mi
+            Me dedico a desarrollar aplicaciones web y también tengo mi
             propio bot de Discord publico llamado{" "}
             <i>
               <b className={title({ color: "green", size: "xl" })}>Mankekito</b>
