@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import "../../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Fco-GT Web Portfolio With Astro" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      import { gsap } from "gsap";
+      import { ScrollTrigger } from "gsap/ScrollTrigger";
+      gsap.registerPlugin(ScrollTrigger);
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "JetBrainsMono";
+    src: url("/fonts/JetBrainsMono-Medium.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "JetBrainsMono", monospace;
+    padding: 0;
+    margin: 0;
+    color-scheme: dark;
+  }
+</style>
