@@ -55,7 +55,7 @@ export const experience = [
     company: "Max and Beresford Orthodontists",
     position: "Frontend Developer & SEO Specialist",
     period: "Sep 2025 — Oct 2025",
-    location: "Auckland, New Zealand",
+    location: "Auckland, New Zealand (Hybrid)",
     description:
       "Enhanced UI/UX and SEO performance for healthcare provider's website, improving patient reach and site performance.",
     achievements: [
