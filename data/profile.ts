@@ -13,40 +13,97 @@ export const profile = {
   resume: "/resume.pdf",
 };
 
+import {
+  Code2,
+  FileText,
+  FileJson,
+  Box,
+  Server,
+  FileCode,
+  Database,
+  Wind,
+  Network,
+  Search,
+  GitBranch,
+  Smartphone,
+} from "lucide-react";
+
 export const skills = [
+  {
+    name: "JavaScript",
+    context: "Backend and frontend development with ES6+ features",
+    icon: Code2,
+  },
+  {
+    name: "HTML",
+    context: "Semantic markup and accessibility best practices",
+    icon: FileText,
+  },
+  {
+    name: "CSS",
+    context: "Responsive design and modern layout techniques (Flexbox, Grid)",
+    icon: FileCode,
+  },
   {
     name: "TypeScript",
     context: "Scalable full-stack applications with typed APIs",
+    icon: FileJson,
   },
   {
     name: "React",
     context: "Component-driven UI with hooks and modern patterns",
+    icon: Box,
   },
   {
     name: "Next.js",
     context: "Server-side rendering, static generation, and API routes",
+    icon: Server,
   },
   {
     name: "Node.js",
     context: "RESTful APIs with Express and microservices architecture",
+    icon: Server,
   },
   {
     name: "Astro",
     context: "Static site generation with performance optimization",
+    icon: FileCode,
   },
   {
     name: "PostgreSQL",
     context: "Relational database design and optimization",
+    icon: Database,
   },
-  { name: "MongoDB", context: "Document-based data modeling and aggregation" },
+  {
+    name: "MongoDB",
+    context: "Document-based data modeling and aggregation",
+    icon: Database,
+  },
   {
     name: "Tailwind CSS",
     context: "Utility-first styling with responsive design",
+    icon: Wind,
   },
-  { name: "GraphQL", context: "Type-safe APIs with modern query language" },
-  { name: "SEO", context: "On-page optimization and Core Web Vitals improvement" },
-  { name: "CI/CD", context: "Automated deployment pipelines with Vercel and Git" },
-  { name: "React Native", context: "Cross-platform mobile app development" },
+  {
+    name: "GraphQL",
+    context: "Type-safe APIs with modern query language",
+    icon: Network,
+  },
+  {
+    name: "SEO",
+    context: "On-page optimization and Core Web Vitals improvement",
+    icon: Search,
+  },
+  {
+    name: "CI/CD",
+    context: "Automated deployment pipelines with Vercel and Git",
+    icon: GitBranch,
+  },
+  {
+    name: "React Native",
+    context: "Cross-platform mobile app development",
+    icon: Smartphone,
+  },
 ];
 
 export const experience = [
