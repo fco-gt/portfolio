@@ -231,7 +231,7 @@ export const projects = [
     role: "Backend Developer",
     links: {
       live: "https://top.gg/bot/758059320238931978",
-      status: "update-notice"
+      status: "update-notice" as const
     },
     featured: true,
   },
