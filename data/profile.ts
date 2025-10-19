@@ -189,8 +189,8 @@ export const projects = [
     id: 1,
     title: "AutoAttendance - FullStack System",
     description:
-      "Comprehensive attendance management system featuring React Native mobile app, Next.js web application, and Node.js microservices backend. Includes QR code check-in, remote check-in with geofencing, and secure JWT authentication.",
-    image: "/autoattendance-system.png",
+      "Comprehensive attendance management system featuring React Native mobile app (private academic project), Next.js web application, and Node.js microservices backend. Includes QR code check-in, remote check-in with geofencing, and secure JWT authentication. The mobile app remains private due to academic requirements.",
+    image: "/autoattendance.png",
     technologies: [
       "React Native",
       "Next.js",
@@ -201,7 +201,9 @@ export const projects = [
     ],
     role: "Full Stack Developer",
     links: {
-      github: "https://github.com/fco-gt/autoattendance",
+      webApp: "https://github.com/fco-gt/autoattendance-frontend",
+      backend: "https://github.com/fco-gt/autoattendance-services",
+      mobileApp: "Private - Academic Project",
     },
     featured: true,
   },
@@ -210,24 +212,26 @@ export const projects = [
     title: "E-commerce Platform with Next.js",
     description:
       "Full-stack e-commerce web application built with N-Tier architecture. Features complete product catalog, checkout system, and user management with Django REST API backend.",
-    image: "/ecommerce-nextjs.png",
+    image: "/master-bikes.png",
     technologies: ["Next.js", "Django", "REST API", "PostgreSQL", "Vercel"],
     role: "Full Stack Developer",
     links: {
-      github: "https://github.com/fco-gt/ecommerce-nextjs",
+      github: "https://github.com/fco-gt/bikes-ecommerce",
+      live: "https://master-bikes.vercel.app/",
     },
     featured: true,
   },
   {
     id: 3,
-    title: "Verified Discord Bot",
+    title: "Mankekito - Verified Discord Bot",
     description:
-      "Discord bot built at age 15 that scaled to 260+ servers and 10,000+ users. Achieved official Discord verification. Built with Node.js and MongoDB for robust user management and features.",
-    image: "/discord-bot.png",
+      "Discord bot built at age 15 that scaled to 260+ servers and 10,000+ users. Achieved official Discord verification and Top.gg listing. Built with Node.js and MongoDB for robust user management and features.",
+    image: "/mankekito.png",
     technologies: ["Node.js", "MongoDB", "Discord.js", "JavaScript"],
     role: "Backend Developer",
     links: {
-      github: "https://github.com/fco-gt/discord-bot",
+      live: "https://top.gg/bot/758059320238931978",
+      status: "update-notice"
     },
     featured: true,
   },
