@@ -38,9 +38,12 @@ export function ContactForm() {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
+        const errorData = await response.json();
+        console.error("Form submission error:", errorData);
         setStatus("error");
       }
-    } catch (error) {
+    } catch (err) {
+      console.error("Form submission error:", err);
       setStatus("error");
     }
   };
@@ -59,14 +62,14 @@ export function ContactForm() {
               variants={slideUp}
               className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
             >
-              Let's Work Together
+              Let&apos;s Work Together
             </motion.h2>
 
             <motion.p
               variants={slideUp}
               className="text-lg text-muted mb-8 text-pretty"
             >
-              I'm always interested in hearing about new projects and
+              I&apos;m always interested in hearing about new projects and
               opportunities. Feel free to reach out!
             </motion.p>
 
