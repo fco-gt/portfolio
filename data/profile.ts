@@ -4,7 +4,7 @@ export const profile = {
   tagline: "TypeScript, React, Next.js — SEO & Performance",
   bio: "FullStack Developer specializing in TypeScript, React, Next.js, and Node.js, with proven experience in SEO optimization and UI/UX improvements. Experienced delivering websites and SaaS solutions with strong Core Web Vitals, scalable architectures, and cloud deployment pipelines. Recently gained local NZ experience enhancing SEO and frontend performance for a healthcare provider in Auckland.",
   email: "fco.gutierrez1227@gmail.com",
-  location: "Auckland, New Zealand",
+  location: "Santiago, Chile",
   availability: "Open to opportunities",
   social: {
     github: "https://github.com/fco-gt",
@@ -231,7 +231,7 @@ export const projects = [
     role: "Backend Developer",
     links: {
       live: "https://top.gg/bot/758059320238931978",
-      status: "update-notice" as const
+      status: "update-notice" as const,
     },
     featured: true,
   },
