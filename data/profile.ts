@@ -1,11 +1,17 @@
 export const profile = {
   name: "Francisco Gutierrez",
-  title: "Full Stack Developer",
-  tagline: "TypeScript, React, Next.js — SEO & Performance",
-  bio: "FullStack Developer specializing in TypeScript, React, Next.js, and Node.js, with proven experience in SEO optimization and UI/UX improvements. Experienced delivering websites and SaaS solutions with strong Core Web Vitals, scalable architectures, and cloud deployment pipelines. Recently gained local NZ experience enhancing SEO and frontend performance for a healthcare provider in Auckland.",
+  title: "Full Stack (enfocado en backend)",
+  tagline: "Node.js · TypeScript · APIs · PostgreSQL · Auth",
+  bio: `FullStack Developer especializado en backend (Node.js y TypeScript)
+
+Diseño e implemento APIs REST, sistemas de autenticación y servicios orientados a datos, con experiencia en proyectos con usuarios reales y entornos de producción.
+
+He trabajado en integraciones con terceros, modelado de bases de datos, control de accesos y optimización de rendimiento en endpoints críticos.
+
+Experiencia con PostgreSQL, Prisma, MongoDB, JWT, CI/CD y arquitecturas orientadas a servicios.`,
   email: "fco.gutierrez1227@gmail.com",
   location: "Santiago, Chile",
-  availability: "Open to opportunities",
+  availability: "Abierto a oportunidades",
   social: {
     github: "https://github.com/fco-gt",
     linkedin: "https://www.linkedin.com/in/francisco-guti%C3%A9rrez-1b7580254",
@@ -31,77 +37,77 @@ import {
 export const skills = [
   {
     name: "JavaScript",
-    context: "Backend and frontend development with ES6+ features",
+    context: "Desarrollo backend y frontend con características ES6+",
     icon: Code2,
   },
   {
     name: "HTML",
-    context: "Semantic markup and accessibility best practices",
+    context: "Marcado semántico y mejores prácticas de accesibilidad",
     icon: FileText,
   },
   {
     name: "CSS",
-    context: "Responsive design and modern layout techniques (Flexbox, Grid)",
+    context: "Diseño responsivo y técnicas modernas de layout (Flexbox, Grid)",
     icon: FileCode,
   },
   {
     name: "TypeScript",
-    context: "Scalable full-stack applications with typed APIs",
+    context: "Aplicaciones full-stack escalables con APIs tipadas",
     icon: FileJson,
   },
   {
     name: "React",
-    context: "Component-driven UI with hooks and modern patterns",
+    context: "UI orientada a componentes con hooks y patrones modernos",
     icon: Box,
   },
   {
     name: "Next.js",
-    context: "Server-side rendering, static generation, and API routes",
+    context: "Renderizado en servidor, generación estática y rutas API",
     icon: Server,
   },
   {
     name: "Node.js",
-    context: "RESTful APIs with Express and microservices architecture",
+    context: "APIs RESTful con Express y arquitectura de microservicios",
     icon: Server,
   },
   {
     name: "Astro",
-    context: "Static site generation with performance optimization",
+    context: "Generación de sitios estáticos con optimización de rendimiento",
     icon: FileCode,
   },
   {
     name: "PostgreSQL",
-    context: "Relational database design and optimization",
+    context: "Diseño y optimización de bases de datos relacionales",
     icon: Database,
   },
   {
     name: "MongoDB",
-    context: "Document-based data modeling and aggregation",
+    context: "Modelado de datos basado en documentos y agregación",
     icon: Database,
   },
   {
     name: "Tailwind CSS",
-    context: "Utility-first styling with responsive design",
+    context: "Estilos orientados a utilidades con diseño responsivo",
     icon: Wind,
   },
   {
     name: "GraphQL",
-    context: "Type-safe APIs with modern query language",
+    context: "APIs de tipo seguro con lenguaje de consulta moderno",
     icon: Network,
   },
   {
     name: "SEO",
-    context: "On-page optimization and Core Web Vitals improvement",
+    context: "Optimización en página y mejora de Core Web Vitals",
     icon: Search,
   },
   {
     name: "CI/CD",
-    context: "Automated deployment pipelines with Vercel and Git",
+    context: "Pipelines de despliegue automatizados con Vercel y Git",
     icon: GitBranch,
   },
   {
     name: "React Native",
-    context: "Cross-platform mobile app development",
+    context: "Desarrollo de aplicaciones móviles multiplataforma",
     icon: Smartphone,
   },
 ];
@@ -109,76 +115,48 @@ export const skills = [
 export const experience = [
   {
     id: 1,
-    company: "Max and Beresford Orthodontists",
-    position: "Frontend Developer & SEO Specialist",
-    period: "Sep 2025 — Oct 2025",
-    location: "Auckland, New Zealand (Hybrid)",
-    description:
-      "Enhanced UI/UX and SEO performance for healthcare provider's website, improving patient reach and site performance.",
-    achievements: [
-      "Improved UI/UX using HTML, CSS, and JavaScript",
-      "Conducted comprehensive SEO optimization including metadata and content structure",
-      "Enhanced Google search visibility and site speed, boosting patient reach",
-    ],
-    technologies: ["HTML", "CSS", "JavaScript", "SEO"],
-  },
-  {
-    id: 2,
     company: "Psiquesanacion",
-    position: "FullStack Developer",
-    period: "Jul 2025 — Aug 2025",
-    location: "Santiago, Chile (Remote)",
+    position: "Desarrollador FullStack",
+    period: "Jun 2025 — Aug 2025",
+    location: "Santiago, Chile",
     description:
-      "Migrated legacy website to modern stack, built custom blog system, and automated deployment pipeline.",
+      "Migré el sitio web heredado a una pila moderna, construí un sistema de blog personalizado y automaticé el pipeline de despliegue.",
     achievements: [
-      "Migrated legacy site to Astro, improving Lighthouse SEO score by 90%",
-      "Built custom blog publishing system with MongoDB and Cloudinary integration",
-      "Automated deployment with Vercel and GitHub CI/CD pipeline",
+      "Diseño e implementación de un sistema de publicación de contenidos utilizando Node.js y MongoDB.",
+      "Integración de Cloudinary para almacenamiento y entrega de imágenes.",
+      "Implementación de autenticación y control de acceso mediante JWT para acciones administrativas",
+      "Desarrollo de APIs REST consumidas por frontend en Astro y configuración de despliegues automatizados con GitHub Actions.",
     ],
     technologies: ["Astro", "MongoDB", "Cloudinary", "Vercel", "GitHub"],
   },
   {
-    id: 3,
+    id: 2,
     company: "BrandBits Agency",
-    position: "Web Development Intern",
+    position: "Practica Desarrollo Web",
     period: "Feb 2025 — May 2025",
-    location: "Santiago, Chile (Hybrid)",
+    location: "Santiago, Chile",
     description:
-      "Implemented marketing features and maintained client communication while debugging integration issues.",
+      "Implementé características de marketing y mantuve la comunicación con clientes mientras depuraba problemas de integración.",
     achievements: [
-      "Implemented marketing features and SEO improvements including meta tags and alt text",
-      "Debugged chatbot webhook integration using HTML and JavaScript",
-      "Maintained direct client communication and project coordination",
+      "Mantenimiento y mejora de funcionalidades web.",
+      "Integración de APIs de terceros y webhooks para automatización de flujos internos.",
+      "Colaboración con equipos de diseño y marketing.",
     ],
     technologies: ["HTML", "JavaScript", "SEO", "Webhooks"],
   },
   {
-    id: 4,
-    company: "Eficontable",
-    position: "Frontend Developer",
-    period: "Jan 2025 — Feb 2025",
-    location: "Santiago, Chile (Remote)",
-    description:
-      "Built responsive corporate website with performance optimizations and modern deployment practices.",
-    achievements: [
-      "Built responsive corporate website using Astro framework",
-      "Applied performance and SEO optimizations, improved Core Web Vitals",
-      "Deployed with Vercel and Git for CI/CD implementation",
-    ],
-    technologies: ["Astro", "Responsive Design", "SEO", "Vercel", "Git"],
-  },
-  {
-    id: 5,
+    id: 3,
     company: "Agis",
-    position: "FullStack Developer",
+    position: "Desarrollador FullStack",
     period: "Sep 2024 — Jan 2025",
-    location: "Santiago, Chile (Remote)",
+    location: "Santiago, Chile",
     description:
-      "Developed e-commerce platform with WooCommerce integration and implemented efficient deployment processes.",
+      "Desarrollé una plataforma de e-commerce con integración de WooCommerce e implementé procesos de despliegue eficientes.",
     achievements: [
-      "Developed e-commerce platform integrated with WooCommerce/WordPress API",
-      "Implemented CI/CD on Vercel, reducing deployment time by 70%",
-      "Improved on-page SEO and content structure optimization",
+      "Implementación de integraciones backend con la API REST de WooCommerce para sincronización de productos, pedidos y usuarios.",
+      "Desarrollo de endpoints protegidos mediante JWT para flujos de autenticación y autorización entre servicios.",
+      "Resolución de problemas de performance y consistencia de datos en procesos de sincronización (paginación, batching y retries).",
+      "Configuración de pipelines CI/CD que automatizaron despliegues y redujeron errores manuales.",
     ],
     technologies: ["WooCommerce", "WordPress API", "Vercel", "SEO", "CI/CD"],
   },
@@ -187,9 +165,9 @@ export const experience = [
 export const projects = [
   {
     id: 1,
-    title: "AutoAttendance - FullStack System",
+    title: "AutoAttendance - Sistema FullStack",
     description:
-      "Comprehensive attendance management system featuring React Native mobile app (private academic project), Next.js web application, and Node.js microservices backend. Includes QR code check-in, remote check-in with geofencing, and secure JWT authentication. The mobile app remains private due to academic requirements.",
+      "Sistema integral de gestión de asistencia con aplicación móvil React Native (proyecto académico privado), aplicación web Next.js y backend de microservicios Node.js. Incluye check-in con código QR, check-in remoto con geofencing y autenticación JWT segura. La aplicación móvil permanece privada por requisitos académicos.",
     image: "/autoattendance.png",
     technologies: [
       "React Native",
@@ -199,7 +177,7 @@ export const projects = [
       "JWT",
       "Microservices",
     ],
-    role: "Full Stack Developer",
+    role: "Desarrollador Full Stack",
     links: {
       webApp: "https://github.com/fco-gt/autoattendance-frontend",
       backend: "https://github.com/fco-gt/autoattendance-services",
@@ -209,12 +187,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: "E-commerce Platform with Next.js",
+    title: "Plataforma de E-commerce con Next.js",
     description:
-      "Full-stack e-commerce web application built with N-Tier architecture. Features complete product catalog, checkout system, and user management with Django REST API backend.",
+      "Aplicación web de e-commerce full-stack construida con arquitectura N-Tier. Incluye catálogo de productos completo, sistema de checkout y gestión de usuarios con backend de API REST con Django.",
     image: "/master-bikes.png",
     technologies: ["Next.js", "Django", "REST API", "PostgreSQL", "Vercel"],
-    role: "Full Stack Developer",
+    role: "Desarrollador Full Stack",
     links: {
       github: "https://github.com/fco-gt/bikes-ecommerce",
       live: "https://master-bikes.vercel.app/",
@@ -223,12 +201,12 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Mankekito - Verified Discord Bot",
+    title: "Mankekito - Bot Verificado de Discord",
     description:
-      "Discord bot built at age 15 that scaled to 260+ servers and 10,000+ users. Achieved official Discord verification and Top.gg listing. Built with Node.js and MongoDB for robust user management and features.",
+      "Bot de Discord construido a los 15 años que se escaló a más de 260 servidores y 10,000+ usuarios. Logró verificación oficial de Discord y listado en Top.gg. Construido con Node.js y MongoDB para gestión robusta de usuarios y características.",
     image: "/mankekito.png",
     technologies: ["Node.js", "MongoDB", "Discord.js", "JavaScript"],
-    role: "Backend Developer",
+    role: "Desarrollador Backend",
     links: {
       live: "https://top.gg/bot/758059320238931978",
       status: "update-notice" as const,
