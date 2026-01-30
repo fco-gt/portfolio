@@ -8,33 +8,33 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Francisco Gutierrez — Full Stack Developer",
+  title: "Francisco Gutierrez — Desarrollador Full Stack",
   description:
-    "Full Stack Developer specializing in TypeScript, React, and Next.js. Building scalable, performant web applications with modern technologies.",
+    "Desarrollador Full Stack especializado en TypeScript, React y Next.js. Construyo aplicaciones web escalables y de alto rendimiento con tecnologías modernas.",
   keywords: [
-    "Full Stack Developer",
+    "Desarrollador Full Stack",
     "TypeScript",
     "React",
     "Next.js",
-    "Web Development",
-    "Software Engineer",
+    "Desarrollo Web",
+    "Ingeniero de Software",
   ],
   authors: [{ name: "Francisco Gutierrez" }],
   creator: "Francisco Gutierrez",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "es_ES",
     url: "https://fco-gt.vercel.app",
-    title: "Francisco Gutierrez — Full Stack Developer",
+    title: "Francisco Gutierrez — Desarrollador Full Stack",
     description:
-      "Full Stack Developer specializing in TypeScript, React, and Next.js. Building scalable, performant web applications.",
-    siteName: "Francisco Gutierrez Portfolio",
+      "Desarrollador Full Stack especializado en TypeScript, React y Next.js. Construyo aplicaciones web escalables y de alto rendimiento.",
+    siteName: "Portafolio de Francisco Gutierrez",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Francisco Gutierrez — Full Stack Developer",
+    title: "Francisco Gutierrez — Desarrollador Full Stack",
     description:
-      "Full Stack Developer specializing in TypeScript, React, and Next.js. Building scalable, performant web applications.",
+      "Desarrollador Full Stack especializado en TypeScript, React y Next.js. Construyo aplicaciones web escalables y de alto rendimiento.",
   },
   robots: {
     index: true,

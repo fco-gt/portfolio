@@ -45,7 +45,7 @@ export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
                 fontWeight: "bold",
                 color: "#0B1020",
               }}>
-                New Contact Message
+                Nuevo Mensaje de Contacto
               </Heading>
             </Section>
 
@@ -56,7 +56,7 @@ export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
                 lineHeight: "1.6",
                 color: "#9CA3AF",
               }}>
-                You have received a new message from your portfolio contact form.
+                Has recibido un nuevo mensaje desde el formulario de contacto de tu portafolio.
               </Text>
 
               {/* Sender Info */}
@@ -74,7 +74,7 @@ export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
                     textTransform: "uppercase",
                     letterSpacing: "0.5px",
                   }}>
-                    From:
+                    De:
                   </Text>
                   <Text style={{
                     margin: "4px 0 0 0",
@@ -92,7 +92,7 @@ export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
                     textTransform: "uppercase",
                     letterSpacing: "0.5px",
                   }}>
-                    Email:
+                    Correo Electrónico:
                   </Text>
                   <Link
                     href={`mailto:${email}`}
@@ -115,7 +115,7 @@ export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
                   letterSpacing: "0.5px",
                   marginBottom: "12px",
                 }}>
-                  Message:
+                  Mensaje:
                 </Text>
                 <Text style={{
                   backgroundColor: "#1F2937",
@@ -145,7 +145,7 @@ export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
                     fontSize: "16px",
                   }}
                 >
-                  Reply to {name}
+                  Responder a {name}
                 </Link>
               </Section>
             </Section>
@@ -162,7 +162,7 @@ export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
                 fontSize: "14px",
                 color: "#6B7280",
               }}>
-                This message was sent from your portfolio contact form
+                Este mensaje fue enviado desde el formulario de contacto de tu portafolio
               </Text>
             </Section>
           </Section>

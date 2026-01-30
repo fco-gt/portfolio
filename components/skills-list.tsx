@@ -26,15 +26,14 @@ export function SkillsList() {
             variants={slideUp}
             className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
           >
-            Skills & Expertise
+            Habilidades y Experiencia
           </motion.h2>
 
           <motion.p
             variants={slideUp}
             className="text-lg text-muted mb-12 max-w-2xl text-pretty"
           >
-            Technologies and tools I use to build exceptional digital
-            experiences.
+            Tecnologías y herramientas que utilizo para construir experiencias digitales excepcionales.
           </motion.p>
 
           <motion.div

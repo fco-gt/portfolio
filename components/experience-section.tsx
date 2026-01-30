@@ -21,14 +21,14 @@ export function ExperienceSection() {
             variants={slideUp}
             className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
           >
-            Experience
+            Experiencia
           </motion.h2>
 
           <motion.p
             variants={slideUp}
             className="text-lg text-muted mb-12 max-w-2xl text-pretty"
           >
-            My professional journey
+            Mi trayectoria profesional
           </motion.p>
 
           <motion.div variants={staggerChildren}>

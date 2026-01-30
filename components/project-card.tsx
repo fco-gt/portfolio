@@ -57,7 +57,7 @@ export function ProjectCard({
         />
         {featured && (
           <div className="absolute top-4 right-4 px-3 py-1 gradient-primary text-background text-xs font-bold rounded-full">
-            Featured
+            Destacado
           </div>
         )}
       </div>
@@ -93,19 +93,19 @@ export function ProjectCard({
                   className="gradient-primary hover:opacity-90 text-background font-semibold border-0"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  {links.status === "update-notice" ? "View on Top.gg" : "Live Demo"}
+                  {links.status === "update-notice" ? "Ver en Top.gg" : "Demo en Vivo"}
                 </Button>
               </DialogTrigger>
               {links.status === "update-notice" && (
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>Bot Status Notice</DialogTitle>
+                    <DialogTitle>Aviso de Estado del Bot</DialogTitle>
                     <DialogDescription className="pt-4">
                       <p className="mb-4">
-                        Mankekito is currently undergoing a major update. While the original code is now deprecated and the bot is temporarily offline, you can still view its profile on Top.gg, a professional Discord bot listing platform.
+                        Mankekito se encuentra actualmente en una gran actualización. Si bien el código original está deprecado y el bot está temporalmente fuera de línea, aún puedes ver su perfil en Top.gg, una plataforma profesional de listado de bots de Discord.
                       </p>
                       <p className="mb-4">
-                        The bot achieved verification status and served over 10,000 users across 260+ servers during its active period. A new version with improved features and modern architecture is in development.
+                        El bot logró estado de verificación oficial y sirvió a más de 10,000 usuarios en más de 260 servidores durante su período activo. Una nueva versión con características mejoradas y arquitectura moderna está en desarrollo.
                       </p>
                       <div className="flex justify-end gap-3 mt-6">
                         <DialogTrigger asChild>
@@ -113,7 +113,7 @@ export function ProjectCard({
                             variant="outline"
                             className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
                           >
-                            Cancel
+                            Cancelar
                           </Button>
                         </DialogTrigger>
                         <Button
@@ -122,7 +122,7 @@ export function ProjectCard({
                         >
                           <a href={links.live} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4 mr-2" />
-                            View on Top.gg
+                            Ver en Top.gg
                           </a>
                         </Button>
                       </div>
@@ -141,7 +141,7 @@ export function ProjectCard({
             >
               <a href={links.github} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" />
-                Code
+                Código
               </a>
             </Button>
           )}
@@ -154,21 +154,21 @@ export function ProjectCard({
                   className="border-primary/30 text-white hover:bg-primary/10 bg-transparent group"
                 >
                   <Code2 className="w-4 h-4 mr-2" />
-                  Web App
+                  Aplicación Web
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Limited Functionality Notice</DialogTitle>
+                  <DialogTitle>Aviso de Funcionalidad Limitada</DialogTitle>
                   <DialogDescription className="pt-4">
                     <p className="mb-4">
-                      Please note that this web application is currently operating with limited functionality as it&apos;s part of an academic project.
+                      Por favor, ten en cuenta que esta aplicación web actualmente opera con funcionalidad limitada ya que es parte de un proyecto académico.
                     </p>
                     <p className="mb-4">
-                      While you can explore the frontend code and architecture, the backend integration is intentionally restricted due to academic requirements and intellectual property considerations.
+                      Si bien puedes explorar el código del frontend y la arquitectura, la integración del backend está intencionalmente restringida debido a requisitos académicos y consideraciones de propiedad intelectual.
                     </p>
                     <p className="mb-4">
-                      Would you like to proceed to view the frontend repository?
+                      ¿Te gustaría proceder a ver el repositorio del frontend?
                     </p>
                     <div className="flex justify-end gap-3 mt-6">
                       <DialogTrigger asChild>
@@ -176,7 +176,7 @@ export function ProjectCard({
                           variant="outline"
                           className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
                         >
-                          Cancel
+                          Cancelar
                         </Button>
                       </DialogTrigger>
                       <Button
@@ -185,7 +185,7 @@ export function ProjectCard({
                       >
                         <a href={links.webApp} target="_blank" rel="noopener noreferrer">
                           <Code2 className="w-4 h-4 mr-2" />
-                          View Repository
+                          Ver Repositorio
                         </a>
                       </Button>
                     </div>
@@ -216,21 +216,21 @@ export function ProjectCard({
                   className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
                 >
                   <Smartphone className="w-4 h-4 mr-2" />
-                  Mobile App
+                  Aplicación Móvil
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Academic Project Notice</DialogTitle>
+                  <DialogTitle>Aviso de Proyecto Académico</DialogTitle>
                   <DialogDescription className="pt-4">
                     <p className="mb-4">
-                      The mobile application component of this project is currently private due to academic requirements and intellectual property considerations.
+                      El componente de aplicación móvil de este proyecto actualmente es privado debido a requisitos académicos y consideraciones de propiedad intelectual.
                     </p>
                     <p className="mb-4">
-                      While the web application and backend services are available for public viewing, the mobile app&apos;s source code remains protected. However, you can still explore the architecture and features through the other components of the system.
+                      Si bien la aplicación web y los servicios backend están disponibles para visualización pública, el código fuente de la aplicación móvil permanece protegido. Sin embargo, aún puedes explorar la arquitectura y características a través de los otros componentes del sistema.
                     </p>
                     <p>
-                      Feel free to check out the web application and backend repositories to understand the system&apos;s architecture and implementation.
+                      Siéntete libre de consultar la aplicación web y los repositorios backend para entender la arquitectura e implementación del sistema.
                     </p>
                   </DialogDescription>
                 </DialogHeader>
@@ -245,7 +245,7 @@ export function ProjectCard({
             >
               <a href={links.mobileApp} target="_blank" rel="noopener noreferrer">
                 <Smartphone className="w-4 h-4 mr-2" />
-                Mobile App
+                Aplicación Móvil
               </a>
             </Button>
           )}

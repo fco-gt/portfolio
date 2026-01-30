@@ -21,15 +21,14 @@ export function ProjectsSection() {
             variants={slideUp}
             className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
           >
-            Featured Projects
+            Proyectos Destacados
           </motion.h2>
 
           <motion.p
             variants={slideUp}
             className="text-lg text-muted mb-12 max-w-2xl text-pretty"
           >
-            A selection of projects showcasing my technical skills and
-            problem-solving approach.
+            Una selección de proyectos que muestran mis habilidades técnicas y enfoque en la resolución de problemas.
           </motion.p>
 
           <motion.div

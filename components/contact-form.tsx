@@ -62,15 +62,14 @@ export function ContactForm() {
               variants={slideUp}
               className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
             >
-              Let&apos;s Work Together
+              Trabajemos Juntos
             </motion.h2>
 
             <motion.p
               variants={slideUp}
               className="text-lg text-muted mb-8 text-pretty"
             >
-              I&apos;m always interested in hearing about new projects and
-              opportunities. Feel free to reach out!
+              Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades. ¡No dudes en contactarme!
             </motion.p>
 
             <motion.div variants={slideUp} className="space-y-4">
@@ -100,7 +99,7 @@ export function ContactForm() {
                 htmlFor="name"
                 className="block text-sm font-medium text-white mb-2"
               >
-                Name
+                Nombre
               </label>
               <Input
                 id="name"
@@ -111,7 +110,7 @@ export function ContactForm() {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 className="bg-surface border-border text-white"
-                placeholder="Your name"
+                placeholder="Tu nombre"
               />
             </div>
 
@@ -120,7 +119,7 @@ export function ContactForm() {
                 htmlFor="email"
                 className="block text-sm font-medium text-white mb-2"
               >
-                Email
+                Correo Electrónico
               </label>
               <Input
                 id="email"
@@ -131,7 +130,7 @@ export function ContactForm() {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 className="bg-surface border-border text-white"
-                placeholder="your.email@example.com"
+                placeholder="tu.email@ejemplo.com"
               />
             </div>
 
@@ -140,7 +139,7 @@ export function ContactForm() {
                 htmlFor="message"
                 className="block text-sm font-medium text-white mb-2"
               >
-                Message
+                Mensaje
               </label>
               <Textarea
                 id="message"
@@ -151,7 +150,7 @@ export function ContactForm() {
                   setFormData({ ...formData, message: e.target.value })
                 }
                 className="bg-surface border-border text-white resize-none"
-                placeholder="Tell me about your project..."
+                placeholder="Cuéntame sobre tu proyecto..."
               />
             </div>
 
@@ -162,21 +161,21 @@ export function ContactForm() {
               className="w-full bg-primary hover:bg-primary-600 text-background font-semibold"
             >
               {status === "loading" ? (
-                "Sending..."
+                "Enviando..."
               ) : (
                 <>
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  Enviar Mensaje
                 </>
               )}
             </Button>
 
             {status === "success" && (
-              <p className="text-primary text-sm">Message sent successfully!</p>
+              <p className="text-primary text-sm">¡Mensaje enviado correctamente!</p>
             )}
             {status === "error" && (
               <p className="text-red-500 text-sm">
-                Failed to send message. Please try again.
+                Error al enviar el mensaje. Por favor intenta de nuevo.
               </p>
             )}
           </motion.form>

@@ -27,25 +27,25 @@ export function Header() {
             href="#about"
             className="text-muted hover:text-white transition-colors"
           >
-            About
+            Acerca de
           </Link>
           <Link
             href="#experience"
             className="text-muted hover:text-white transition-colors"
           >
-            Experience
+            Experiencia
           </Link>
           <Link
             href="#projects"
             className="text-muted hover:text-white transition-colors"
           >
-            Projects
+            Proyectos
           </Link>
           <Link
             href="#contact"
             className="text-muted hover:text-white transition-colors"
           >
-            Contact
+            Contacto
           </Link>
         </nav>
 

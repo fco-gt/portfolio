@@ -43,7 +43,7 @@ export function Footer() {
           </div>
 
           <p className="text-muted text-sm">
-            © {new Date().getFullYear()} Some rights reserved.
+            © {new Date().getFullYear()} Todos los derechos reservados.
           </p>
         </div>
       </div>

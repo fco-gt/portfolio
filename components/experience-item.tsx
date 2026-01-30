@@ -50,7 +50,7 @@ export function ExperienceItem({
 
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-white mb-2">
-            Key Achievements:
+            Logros Clave:
           </h4>
           <ul className="space-y-2">
             {achievements.map((achievement, index) => (

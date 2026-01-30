@@ -16,7 +16,7 @@ Experiencia con PostgreSQL, Prisma, MongoDB, JWT, CI/CD y arquitecturas orientad
     github: "https://github.com/fco-gt",
     linkedin: "https://www.linkedin.com/in/francisco-guti%C3%A9rrez-1b7580254",
   },
-  resume: "/resume.pdf",
+  resume: "/resume.docx",
 };
 
 import {
