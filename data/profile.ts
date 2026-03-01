@@ -180,7 +180,7 @@ export const projects = [
     technologies: ["Golang", "RabbitMQ", "Clean Architecture", "Prometheus", "Grafana"],
     role: "Backend Architect",
     links: {
-      github: "https://github.com/fco-gt/quick-attendance-go",
+      github: "https://github.com/fco-gt/quickattendance-go",
     },
     featured: true,
   },
