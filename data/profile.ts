@@ -18,81 +18,80 @@ Experto en integraciones con terceros, modelado de bases de datos, control de ac
 };
 
 import {
-  Code2,
-  FileJson,
-  Server,
-  Database,
-  Wind,
-  GitBranch,
-  Smartphone,
-  Box,
-  Cpu,
-  Layers,
-  Terminal,
-  ShieldCheck,
-  Zap,
-} from "lucide-react";
+  CICDIcon,
+  DockerIcon,
+  GinIcon,
+  GolangIcon,
+  NodeJsIcon,
+  PostgreSQLIcon,
+  PrismaIcon,
+  RabbitMQIcon,
+  ReactIcon,
+  RedisIcon,
+  SecurityIcon,
+  TypescriptIcon,
+} from "@/components/icons";
 
 export const skills = [
   {
     name: "Golang",
     context: "Desarrollo de microservicios de alto rendimiento y herramientas CLI",
-    icon: Terminal,
+    icon: GolangIcon,
   },
   {
     name: "Node.js",
     context: "APIs RESTful escalables con Express y arquitectura de microservicios",
-    icon: Server,
+    icon: NodeJsIcon,
   },
   {
     name: "TypeScript",
     context: "Aplicaciones robustas con tipado estático y mejores prácticas",
-    icon: FileJson,
+    icon: TypescriptIcon,
   },
   {
     name: "PostgreSQL",
     context: "Diseño, optimización de queries y modelado relacional avanzado",
-    icon: Database,
+    icon: PostgreSQLIcon,
   },
   {
     name: "Redis",
     context: "Estrategias de caching, gestión de sesiones y colas de mensajes",
-    icon: Zap,
+    icon: RedisIcon,
   },
   {
     name: "Docker",
     context: "Contenerización de aplicaciones y gestión de entornos de desarrollo",
-    icon: Box,
+    icon: DockerIcon,
   },
   {
     name: "RabbitMQ",
     context: "Mensajería asíncrona y comunicación desacoplada entre servicios",
-    icon: Layers,
+    icon: RabbitMQIcon,
   },
   {
     name: "CI/CD",
     context: "Automatización de despliegues y tests con GitHub Actions",
-    icon: GitBranch,
+    icon: CICDIcon,
   },
   {
     name: "Prisma",
     context: "ORM moderno para Node.js y TypeScript con seguridad de tipos",
-    icon: Code2,
+    icon: PrismaIcon,
   },
   {
     name: "Gin",
     context: "Framework web de alto rendimiento para aplicaciones en Go",
-    icon: Cpu,
+    icon: GinIcon,
   },
   {
     name: "Seguridad",
     context: "Implementación de OAuth2, JWT y control de acceso RBAC",
-    icon: ShieldCheck,
+    icon: SecurityIcon,
   },
   {
     name: "React Native",
     context: "Desarrollo de aplicaciones móviles multiplataforma",
-    icon: Smartphone,
+    icon: ReactIcon,
   },
 ];
 
