@@ -10,7 +10,7 @@ export function ExperienceSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="experience" ref={ref} className="py-24">
+    <section id="experience" ref={ref} className="py-12 md:py-24">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial="hidden"

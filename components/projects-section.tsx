@@ -10,7 +10,7 @@ export function ProjectsSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="projects" ref={ref} className="py-24 bg-surface/50">
+    <section id="projects" ref={ref} className="py-12 md:py-24 bg-surface/50">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial="hidden"

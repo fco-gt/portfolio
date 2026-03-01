@@ -38,14 +38,14 @@ export function SkillsList() {
 
           <motion.div
             variants={staggerChildren}
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-4 grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
           >
             {skills.map((skill) => (
               <motion.div
                 key={skill.name}
                 variants={slideUp}
                 whileHover={{ scale: 1.02 }}
-                className="relative p-6 bg-surface border border-border rounded-lg hover:border-primary/30 transition-colors group"
+                className="relative p-4 md:p-6 bg-surface border border-border rounded-lg hover:border-primary/30 transition-colors group"
               >
                 <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity rounded-lg pointer-events-none" />
                 <div className="relative">
@@ -57,7 +57,7 @@ export function SkillsList() {
                       {skill.name}
                     </h3>
                   </div>
-                  <p className="text-muted text-sm leading-relaxed">
+                  <p className="text-muted text-xs md:text-sm leading-relaxed hidden md:block">
                     {skill.context}
                   </p>
                 </div>

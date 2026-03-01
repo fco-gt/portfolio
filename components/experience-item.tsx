@@ -31,16 +31,16 @@ export function ExperienceItem({
       {/* Timeline dot */}
       <div className="absolute left-0 top-0 -translate-x-[9px] w-4 h-4 rounded-full bg-primary border-4 border-background" />
 
-      <div className="bg-surface border border-border rounded-lg p-6 hover:border-primary/30 transition-colors">
-        <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+      <div className="bg-surface border border-border rounded-lg p-4 md:p-6 hover:border-primary/30 transition-colors">
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 md:gap-4 mb-4">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-1">{position}</h3>
-            <p className="text-lg text-primary font-semibold">{company}</p>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{position}</h3>
+            <p className="text-base md:text-lg text-primary font-semibold">{company}</p>
           </div>
-          <div className="text-right">
-            <p className="text-muted font-medium">{period}</p>
-            <p className="text-muted text-sm flex items-center gap-1 justify-end mt-1">
-              <MapPin className="w-4 h-4" />
+          <div className="md:text-right">
+            <p className="text-muted text-sm md:text-base font-medium">{period}</p>
+            <p className="text-muted text-xs md:text-sm flex items-center gap-1 md:justify-end mt-1">
+              <MapPin className="w-3 md:w-4 h-3 md:h-4" />
               {location}
             </p>
           </div>

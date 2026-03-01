@@ -48,7 +48,7 @@ export function ProjectCard({
     >
       <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
-      <div className="relative h-64 overflow-hidden bg-background">
+      <div className="relative h-48 md:h-64 overflow-hidden bg-background">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
@@ -62,13 +62,13 @@ export function ProjectCard({
         )}
       </div>
 
-      <div className="p-6 relative">
+      <div className="p-4 md:p-6 relative">
         <div className="mb-4">
-          <h3 className="text-2xl font-bold text-white mb-2 text-balance">
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-2 text-balance">
             {title}
           </h3>
-          <p className="text-sm text-primary font-medium mb-3">{role}</p>
-          <p className="text-muted leading-relaxed text-pretty">
+          <p className="text-xs md:text-sm text-primary font-medium mb-3">{role}</p>
+          <p className="text-sm md:text-base text-muted leading-relaxed text-pretty">
             {description}
           </p>
         </div>
