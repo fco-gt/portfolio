@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
 import { profile } from "@/data/profile";
 import { fadeIn } from "@/utils/motion";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
+  const t = useTranslations("footer");
+  const common = useTranslations("common");
+
   return (
     <motion.footer
       initial="hidden"
@@ -18,7 +22,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <p className="text-white font-semibold mb-1">{profile.name}</p>
-            <p className="text-muted text-sm">{profile.title}</p>
+            <p className="text-muted text-sm">{t("title")}</p>
           </div>
 
           <div className="flex items-center gap-6">
@@ -27,7 +31,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-primary transition-colors"
-              aria-label="GitHub"
+              aria-label={common("github")}
             >
               <Github className="w-5 h-5" />
             </a>
@@ -36,14 +40,14 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-primary transition-colors"
-              aria-label="LinkedIn"
+              aria-label={common("linkedin")}
             >
               <Linkedin className="w-5 h-5" />
             </a>
           </div>
 
           <p className="text-muted text-sm">
-            © {new Date().getFullYear()} Todos los derechos reservados.
+            © {new Date().getFullYear()} {t("copyright")}
           </p>
         </div>
       </div>

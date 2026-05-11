@@ -1,0 +1,153 @@
+{
+  "common": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "header": {
+    "about": "Acerca de",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "localeSwitcher": "Idioma"
+  },
+  "hero": {
+    "availability": "Abierto a oportunidades",
+    "tagline": "Golang · Node.js · TypeScript · PostgreSQL · Redis · Docker",
+    "bio": "Desarrollador Backend con experiencia en la construcción y mantenimiento de APIs y servicios backend.\n\nEspecializado en el desarrollo completo de soluciones, desde el análisis de requerimientos hasta el despliegue y soporte en producción. Me enfoco en crear sistemas confiables y escalables utilizando Node.js/TypeScript y Go.\n\nExperto en integraciones con terceros, modelado de bases de datos, control de accesos y optimización de rendimiento en entornos críticos.",
+    "cta": "Contáctame",
+    "download": "Descargar CV"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Mi trayectoria profesional",
+    "achievements": "Logros Clave:",
+    "item1": {
+      "position": "Web Developer",
+      "period": "Sep 2025 — Oct 2025",
+      "location": "Auckland, New Zealand",
+      "description": "Desarrollé y mantuve soluciones web en un entorno internacional, mejorando la presencia digital de la clínica.",
+      "achievements": [
+        "Optimización de componentes web para mejorar la experiencia del usuario.",
+        "Colaboración en un equipo multicultural siguiendo estándares internacionales."
+      ]
+    },
+    "item2": {
+      "position": "Backend Developer",
+      "period": "Jun 2025 — Aug 2025",
+      "location": "Remoto (Santiago, Chile)",
+      "description": "Diseñé e implementé el núcleo de la API y el sistema de gestión de contenidos.",
+      "achievements": [
+        "Diseño y desarrollo de APIs REST en Node.js/Express.",
+        "Implementación de autenticación JWT y control de accesos granular.",
+        "Integración de Cloudinary para gestión de contenido multimedia y CDN.",
+        "Configuración de pipelines CI/CD con GitHub Actions para despliegues automáticos."
+      ]
+    },
+    "item3": {
+      "position": "Web Developer (Práctica)",
+      "period": "Feb 2025 — May 2025",
+      "location": "Santiago, Chile",
+      "description": "Apoyé en el mantenimiento de plataformas web y la integración de herramientas de marketing.",
+      "achievements": [
+        "Mantenimiento proactivo de funcionalidades web existentes.",
+        "Integración de APIs y webhooks para la automatización de flujos internos."
+      ]
+    },
+    "item4": {
+      "position": "Backend Developer",
+      "period": "Sep 2024 — Jan 2025",
+      "location": "Remoto (Santiago, Chile)",
+      "description": "Me especialicé en integraciones críticas y optimización de rendimiento backend.",
+      "achievements": [
+        "Sincronización robusta con APIs de terceros (WooCommerce) manejando grandes volúmenes de datos.",
+        "Implementación de mecanismos de idempotencia, retries y control de backpressure.",
+        "Resolución de incidentes de performance y tuning de queries complejas en SQL."
+      ]
+    }
+  },
+  "skills": {
+    "title": "Habilidades y Experiencia",
+    "subtitle": "Tecnologías y herramientas que utilizo para construir experiencias digitales excepcionales."
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Una selección de proyectos que muestran mis habilidades técnicas y enfoque en la resolución de problemas.",
+    "featured": "Destacado",
+    "code": "Código",
+    "webApp": "Aplicación Web",
+    "backend": "Backend",
+    "mobileApp": "Aplicación Móvil",
+    "liveDemo": "Demo en Vivo",
+    "item1": {
+      "title": "GoPotency - Idempotencia en Go",
+      "description": "Librería/middleware en Go diseñada para aplicar idempotencia en endpoints HTTP de forma sencilla. Permite asegurar que operaciones críticas no se dupliquen, soportando estrategias de clave por body hash o headers, con almacenamiento persistente en Postgres o Redis.",
+      "role": "Desarrollador Backend"
+    },
+    "item2": {
+      "title": "QuickAttendance - Escalamiento a Go",
+      "description": "Migración y evolución del sistema core de asistencia a Go utilizando Clean Architecture. Implementa arquitectura multi-tenant, procesamiento de tareas asíncronas con RabbitMQ y monitoreo en tiempo real con Prometheus y Grafana.",
+      "role": "Backend Architect"
+    },
+    "item3": {
+      "title": "AutoAttendance - Microservicios",
+      "description": "Sistema integral de gestión de asistencia basado en microservicios. Incluye check-in via QR, geofencing para asistencia remota y un sistema seguro de autenticación. Proyecto de titulación con backend robusto en Node.js y base de datos relacional.",
+      "role": "Full Stack Developer"
+    }
+  },
+  "projectDialogs": {
+    "cancel": "Cancelar",
+    "viewRepository": "Ver Repositorio",
+    "topgg": {
+      "title": "Aviso de Estado del Bot",
+      "paragraphs": [
+        "Mankekito se encuentra actualmente en una gran actualización. Si bien el código original está deprecado y el bot está temporalmente fuera de línea, aún puedes ver su perfil en Top.gg, una plataforma profesional de listado de bots de Discord.",
+        "El bot logró estado de verificación oficial y sirvió a más de 10,000 usuarios en más de 260 servidores durante su período activo. Una nueva versión con características mejoradas y arquitectura moderna está en desarrollo."
+      ],
+      "action": "Ver en Top.gg"
+    },
+    "webapp": {
+      "title": "Aviso de Funcionalidad Limitada",
+      "paragraphs": [
+        "Por favor, ten en cuenta que esta aplicación web actualmente opera con funcionalidad limitada ya que es parte de un proyecto académico.",
+        "Si bien puedes explorar el código del frontend y la arquitectura, la integración del backend está intencionalmente restringida debido a requisitos académicos y consideraciones de propiedad intelectual.",
+        "¿Te gustaría proceder a ver el repositorio del frontend?"
+      ],
+      "action": "Ver Repositorio"
+    },
+    "mobile": {
+      "title": "Aviso de Proyecto Académico",
+      "paragraphs": [
+        "El componente de aplicación móvil de este proyecto actualmente es privado debido a requisitos académicos y consideraciones de propiedad intelectual.",
+        "Si bien la aplicación web y los servicios backend están disponibles para visualización pública, el código fuente de la aplicación móvil permanece protegido. Sin embargo, aún puedes explorar la arquitectura y características a través de los otros componentes del sistema.",
+        "Siéntete libre de consultar la aplicación web y los repositorios backend para entender la arquitectura e implementación del sistema."
+      ]
+    }
+  },
+  "contact": {
+    "title": "Trabajemos Juntos",
+    "subtitle": "Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades. ¡No dudes en contactarme!",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "tu.email@ejemplo.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "sending": "Enviando...",
+    "send": "Enviar Mensaje",
+    "success": "¡Mensaje enviado correctamente!",
+    "error": "Error al enviar el mensaje. Por favor intenta de nuevo."
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados.",
+    "title": "Desarrollador Backend (Golang / Node.js)"
+  },
+  "metadata": {
+    "title": "Francisco Gutierrez — Desarrollador Full Stack",
+    "description": "Desarrollador Full Stack especializado en TypeScript, React y Next.js. Construyo aplicaciones web escalables y de alto rendimiento con tecnologías modernas.",
+    "ogTitle": "Francisco Gutierrez — Desarrollador Full Stack",
+    "ogDescription": "Desarrollador Full Stack especializado en TypeScript, React y Next.js. Construyo aplicaciones web escalables y de alto rendimiento.",
+    "ogSiteName": "Portafolio de Francisco Gutierrez",
+    "twitterTitle": "Francisco Gutierrez — Desarrollador Full Stack",
+    "twitterDescription": "Desarrollador Full Stack especializado en TypeScript, React y Next.js. Construyo aplicaciones web escalables y de alto rendimiento."
+  }
+}

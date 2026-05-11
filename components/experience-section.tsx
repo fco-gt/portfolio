@@ -5,9 +5,11 @@ import { experience } from "@/data/profile";
 import { ExperienceItem } from "./experience-item";
 import { slideUp, staggerChildren } from "@/utils/motion";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useTranslations } from "next-intl";
 
 export function ExperienceSection() {
   const { ref, isVisible } = useScrollReveal();
+  const t = useTranslations("experience");
 
   return (
     <section id="experience" ref={ref} className="py-12 md:py-24">
@@ -21,19 +23,24 @@ export function ExperienceSection() {
             variants={slideUp}
             className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
           >
-            Experiencia
+            {t("title")}
           </motion.h2>
 
           <motion.p
             variants={slideUp}
             className="text-lg text-muted mb-12 max-w-2xl text-pretty"
           >
-            Mi trayectoria profesional
+            {t("subtitle")}
           </motion.p>
 
           <motion.div variants={staggerChildren}>
             {experience.map((exp) => (
-              <ExperienceItem key={exp.id} {...exp} />
+              <ExperienceItem
+                key={exp.id}
+                id={exp.id}
+                company={exp.company}
+                technologies={exp.technologies}
+              />
             ))}
           </motion.div>
         </motion.div>

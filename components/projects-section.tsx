@@ -5,9 +5,11 @@ import { projects } from "@/data/profile";
 import { ProjectCard } from "./project-card";
 import { slideUp, staggerChildren } from "@/utils/motion";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useTranslations } from "next-intl";
 
 export function ProjectsSection() {
   const { ref, isVisible } = useScrollReveal();
+  const t = useTranslations("projects");
 
   return (
     <section id="projects" ref={ref} className="py-12 md:py-24 bg-surface/50">
@@ -21,14 +23,14 @@ export function ProjectsSection() {
             variants={slideUp}
             className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
           >
-            Proyectos Destacados
+            {t("title")}
           </motion.h2>
 
           <motion.p
             variants={slideUp}
             className="text-lg text-muted mb-12 max-w-2xl text-pretty"
           >
-            Una selección de proyectos que muestran mis habilidades técnicas y enfoque en la resolución de problemas.
+            {t("subtitle")}
           </motion.p>
 
           <motion.div
@@ -36,7 +38,14 @@ export function ProjectsSection() {
             className="grid gap-8 md:grid-cols-2 lg:grid-cols-2"
           >
             {projects.map((project) => (
-              <ProjectCard key={project.id} {...project} />
+              <ProjectCard
+                key={project.id}
+                id={project.id}
+                image={project.image}
+                technologies={project.technologies}
+                links={project.links}
+                featured={project.featured}
+              />
             ))}
           </motion.div>
         </motion.div>

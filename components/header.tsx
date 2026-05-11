@@ -1,12 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { profile } from "@/data/profile";
 import { fadeIn } from "@/utils/motion";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { LocaleSwitcher } from "./locale-switcher";
 
 export function Header() {
+  const t = useTranslations("header");
+  const common = useTranslations("common");
+
   return (
     <motion.header
       initial="hidden"
@@ -24,38 +29,39 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-8">
           <Link
-            href="#about"
+            href="/#about"
             className="text-muted hover:text-white transition-colors"
           >
-            Acerca de
+            {t("about")}
           </Link>
           <Link
-            href="#experience"
+            href="/#experience"
             className="text-muted hover:text-white transition-colors"
           >
-            Experiencia
+            {t("experience")}
           </Link>
           <Link
-            href="#projects"
+            href="/#projects"
             className="text-muted hover:text-white transition-colors"
           >
-            Proyectos
+            {t("projects")}
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-muted hover:text-white transition-colors"
           >
-            Contacto
+            {t("contact")}
           </Link>
         </nav>
 
         <div className="flex items-center gap-4">
+          <LocaleSwitcher />
           <a
             href={profile.social.github}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted hover:text-primary transition-colors"
-            aria-label="GitHub"
+            aria-label={common("github")}
           >
             <Github className="w-5 h-5" />
           </a>
@@ -64,7 +70,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted hover:text-primary transition-colors"
-            aria-label="LinkedIn"
+            aria-label={common("linkedin")}
           >
             <Linkedin className="w-5 h-5" />
           </a>

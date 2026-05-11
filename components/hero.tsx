@@ -5,8 +5,11 @@ import { ArrowDown, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { profile } from "@/data/profile";
 import { slideUp, staggerChildren } from "@/utils/motion";
+import { useTranslations } from "next-intl";
 
 export function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-cyan-500/5 to-indigo-500/10 pointer-events-none" />
@@ -24,7 +27,7 @@ export function Hero() {
       >
         <motion.div variants={slideUp} className="mb-6">
           <span className="inline-block px-4 py-2 bg-surface/80 backdrop-blur-sm gradient-border rounded-full text-primary text-sm font-medium">
-            {profile.availability}
+            {t("availability")}
           </span>
         </motion.div>
 
@@ -39,14 +42,14 @@ export function Hero() {
           variants={slideUp}
           className="text-2xl md:text-3xl text-primary font-semibold mb-6 text-balance"
         >
-          {profile.tagline}
+          {t("tagline")}
         </motion.p>
 
         <motion.p
           variants={slideUp}
           className="text-lg md:text-xl text-muted max-w-2xl mb-12 leading-relaxed text-pretty"
         >
-          {profile.bio}
+          {t("bio")}
         </motion.p>
 
         <motion.div variants={slideUp} className="flex flex-wrap gap-4">
@@ -57,7 +60,7 @@ export function Hero() {
           >
             <a href="#contact">
               <Mail className="w-5 h-5 mr-2" />
-              Contáctame
+              {t("cta")}
             </a>
           </Button>
 
@@ -69,7 +72,7 @@ export function Hero() {
           >
             <a href={profile.resume} download>
               <Download className="w-5 h-5 mr-2" />
-              Descargar CV
+              {t("download")}
             </a>
           </Button>
         </motion.div>

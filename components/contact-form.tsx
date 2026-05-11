@@ -11,9 +11,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { profile } from "@/data/profile";
 import { slideUp, staggerChildren } from "@/utils/motion";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useTranslations } from "next-intl";
 
 export function ContactForm() {
   const { ref, isVisible } = useScrollReveal();
+  const t = useTranslations("contact");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -62,14 +64,14 @@ export function ContactForm() {
               variants={slideUp}
               className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
             >
-              Trabajemos Juntos
+              {t("title")}
             </motion.h2>
 
             <motion.p
               variants={slideUp}
               className="text-lg text-muted mb-8 text-pretty"
             >
-              Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades. ¡No dudes en contactarme!
+              {t("subtitle")}
             </motion.p>
 
             <motion.div variants={slideUp} className="space-y-4">
@@ -99,7 +101,7 @@ export function ContactForm() {
                 htmlFor="name"
                 className="block text-sm font-medium text-white mb-2"
               >
-                Nombre
+                {t("nameLabel")}
               </label>
               <Input
                 id="name"
@@ -110,7 +112,7 @@ export function ContactForm() {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 className="bg-surface border-border text-white"
-                placeholder="Tu nombre"
+                placeholder={t("namePlaceholder")}
               />
             </div>
 
@@ -119,7 +121,7 @@ export function ContactForm() {
                 htmlFor="email"
                 className="block text-sm font-medium text-white mb-2"
               >
-                Correo Electrónico
+                {t("emailLabel")}
               </label>
               <Input
                 id="email"
@@ -130,7 +132,7 @@ export function ContactForm() {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 className="bg-surface border-border text-white"
-                placeholder="tu.email@ejemplo.com"
+                placeholder={t("emailPlaceholder")}
               />
             </div>
 
@@ -139,7 +141,7 @@ export function ContactForm() {
                 htmlFor="message"
                 className="block text-sm font-medium text-white mb-2"
               >
-                Mensaje
+                {t("messageLabel")}
               </label>
               <Textarea
                 id="message"
@@ -150,7 +152,7 @@ export function ContactForm() {
                   setFormData({ ...formData, message: e.target.value })
                 }
                 className="bg-surface border-border text-white resize-none"
-                placeholder="Cuéntame sobre tu proyecto..."
+                placeholder={t("messagePlaceholder")}
               />
             </div>
 
@@ -161,22 +163,20 @@ export function ContactForm() {
               className="w-full bg-primary hover:bg-primary-600 text-background font-semibold"
             >
               {status === "loading" ? (
-                "Enviando..."
+                t("sending")
               ) : (
                 <>
                   <Send className="w-5 h-5 mr-2" />
-                  Enviar Mensaje
+                  {t("send")}
                 </>
               )}
             </Button>
 
             {status === "success" && (
-              <p className="text-primary text-sm">¡Mensaje enviado correctamente!</p>
+              <p className="text-primary text-sm">{t("success")}</p>
             )}
             {status === "error" && (
-              <p className="text-red-500 text-sm">
-                Error al enviar el mensaje. Por favor intenta de nuevo.
-              </p>
+              <p className="text-red-500 text-sm">{t("error")}</p>
             )}
           </motion.form>
         </motion.div>

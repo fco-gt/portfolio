@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import { skills } from "@/data/profile";
 import { slideUp, staggerChildren } from "@/utils/motion";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useTranslations } from "next-intl";
 
 export function SkillsList() {
   const { ref, isVisible } = useScrollReveal();
+  const t = useTranslations("skills");
 
   return (
     <section
@@ -26,14 +28,14 @@ export function SkillsList() {
             variants={slideUp}
             className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
           >
-            Habilidades y Experiencia
+            {t("title")}
           </motion.h2>
 
           <motion.p
             variants={slideUp}
             className="text-lg text-muted mb-12 max-w-2xl text-pretty"
           >
-            Tecnologías y herramientas que utilizo para construir experiencias digitales excepcionales.
+            {t("subtitle")}
           </motion.p>
 
           <motion.div

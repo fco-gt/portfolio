@@ -1,0 +1,153 @@
+{
+  "common": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "header": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "localeSwitcher": "Language"
+  },
+  "hero": {
+    "availability": "Open to opportunities",
+    "tagline": "Golang · Node.js · TypeScript · PostgreSQL · Redis · Docker",
+    "bio": "Backend developer with experience building and maintaining APIs and backend services.\n\nSpecialized in end-to-end solution development, from requirements analysis to deployment and production support. I focus on building reliable and scalable systems using Node.js/TypeScript and Go.\n\nExperienced in third-party integrations, database modeling, access control, and performance optimization in critical environments.",
+    "cta": "Contact Me",
+    "download": "Download Resume"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey",
+    "achievements": "Key Achievements:",
+    "item1": {
+      "position": "Web Developer",
+      "period": "Sep 2025 — Oct 2025",
+      "location": "Auckland, New Zealand",
+      "description": "Developed and maintained web solutions in an international environment, improving the clinic's digital presence.",
+      "achievements": [
+        "Optimized web components to enhance user experience.",
+        "Collaborated in a multicultural team following international standards."
+      ]
+    },
+    "item2": {
+      "position": "Backend Developer",
+      "period": "Jun 2025 — Aug 2025",
+      "location": "Remote (Santiago, Chile)",
+      "description": "Designed and implemented the API core and content management system.",
+      "achievements": [
+        "Designed and developed REST APIs in Node.js/Express.",
+        "Implemented JWT authentication and granular access control.",
+        "Integrated Cloudinary for media management and CDN delivery.",
+        "Set up CI/CD pipelines with GitHub Actions for automated deployments."
+      ]
+    },
+    "item3": {
+      "position": "Web Developer (Intern)",
+      "period": "Feb 2025 — May 2025",
+      "location": "Santiago, Chile",
+      "description": "Supported the maintenance of web platforms and integration of marketing tools.",
+      "achievements": [
+        "Proactive maintenance of existing web functionalities.",
+        "Integration of APIs and webhooks for internal workflow automation."
+      ]
+    },
+    "item4": {
+      "position": "Backend Developer",
+      "period": "Sep 2024 — Jan 2025",
+      "location": "Remote (Santiago, Chile)",
+      "description": "Specialized in critical integrations and backend performance optimization.",
+      "achievements": [
+        "Robust synchronization with third-party APIs (WooCommerce) handling large data volumes.",
+        "Implementation of idempotency, retry mechanisms, and backpressure control.",
+        "Performance incident resolution and tuning of complex SQL queries."
+      ]
+    }
+  },
+  "skills": {
+    "title": "Skills & Experience",
+    "subtitle": "Technologies and tools I use to build exceptional digital experiences."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of projects showcasing my technical skills and problem-solving approach.",
+    "featured": "Featured",
+    "code": "Code",
+    "webApp": "Web App",
+    "backend": "Backend",
+    "mobileApp": "Mobile App",
+    "liveDemo": "Live Demo",
+    "item1": {
+      "title": "GoPotency - Idempotency in Go",
+      "description": "Go library/middleware designed to easily apply idempotency to HTTP endpoints. Ensures critical operations are not duplicated, supporting body-hash and header-based key strategies with persistent storage in Postgres or Redis.",
+      "role": "Backend Developer"
+    },
+    "item2": {
+      "title": "QuickAttendance - Go Migration",
+      "description": "Migrated and evolved the core attendance system to Go using Clean Architecture. Implements multi-tenant architecture, async task processing with RabbitMQ, and real-time monitoring with Prometheus and Grafana.",
+      "role": "Backend Architect"
+    },
+    "item3": {
+      "title": "AutoAttendance - Microservices",
+      "description": "Comprehensive attendance management system based on microservices. Includes QR check-in, geofencing for remote attendance, and a secure authentication system. Capstone project with a robust Node.js backend and relational database.",
+      "role": "Full Stack Developer"
+    }
+  },
+  "projectDialogs": {
+    "cancel": "Cancel",
+    "viewRepository": "View Repository",
+    "topgg": {
+      "title": "Bot Status Notice",
+      "paragraphs": [
+        "Mankekito is currently undergoing a major update. While the original code is deprecated and the bot is temporarily offline, you can still view its profile on Top.gg, a professional Discord bot listing platform.",
+        "The bot achieved official verification status and served over 10,000 users across more than 260 servers during its active period. A new version with improved features and modern architecture is in development."
+      ],
+      "action": "View on Top.gg"
+    },
+    "webapp": {
+      "title": "Limited Functionality Notice",
+      "paragraphs": [
+        "Please note that this web application currently operates with limited functionality as it is part of an academic project.",
+        "While you can explore the frontend code and architecture, the backend integration is intentionally restricted due to academic requirements and intellectual property considerations.",
+        "Would you like to proceed to view the frontend repository?"
+      ],
+      "action": "View Repository"
+    },
+    "mobile": {
+      "title": "Academic Project Notice",
+      "paragraphs": [
+        "The mobile application component of this project is currently private due to academic requirements and intellectual property considerations.",
+        "While the web application and backend services are available for public viewing, the mobile application source code remains protected. However, you can still explore the architecture and features through the other system components.",
+        "Feel free to check out the web application and backend repositories to understand the system architecture and implementation."
+      ]
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "I'm always interested in hearing about new projects and opportunities. Don't hesitate to reach out!",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again."
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "title": "Backend Developer (Golang / Node.js)"
+  },
+  "metadata": {
+    "title": "Francisco Gutierrez — Full Stack Developer",
+    "description": "Full Stack Developer specialized in TypeScript, React and Next.js. I build scalable, high-performance web applications with modern technologies.",
+    "ogTitle": "Francisco Gutierrez — Full Stack Developer",
+    "ogDescription": "Full Stack Developer specialized in TypeScript, React and Next.js. I build scalable, high-performance web applications with modern technologies.",
+    "ogSiteName": "Francisco Gutierrez Portfolio",
+    "twitterTitle": "Francisco Gutierrez — Full Stack Developer",
+    "twitterDescription": "Full Stack Developer specialized in TypeScript, React and Next.js. I build scalable, high-performance web applications with modern technologies."
+  }
+}

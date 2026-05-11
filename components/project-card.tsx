@@ -13,13 +13,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
-  title: string;
-  description: string;
+  id: number;
   image: string;
   technologies: string[];
-  role: string;
   links: {
     live?: string;
     github?: string;
@@ -32,14 +31,16 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({
-  title,
-  description,
+  id,
   image,
   technologies,
-  role,
   links,
   featured,
 }: ProjectCardProps) {
+  const t = useTranslations("projects");
+  const dt = useTranslations("projectDialogs");
+  const itemKey = `item${id}`;
+
   return (
     <motion.div
       variants={scaleIn}
@@ -51,13 +52,13 @@ export function ProjectCard({
       <div className="relative h-48 md:h-64 overflow-hidden bg-background">
         <Image
           src={image || "/placeholder.svg"}
-          alt={title}
+          alt={t(`${itemKey}.title`)}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {featured && (
           <div className="absolute top-4 right-4 px-3 py-1 gradient-primary text-background text-xs font-bold rounded-full">
-            Destacado
+            {t("featured")}
           </div>
         )}
       </div>
@@ -65,11 +66,13 @@ export function ProjectCard({
       <div className="p-4 md:p-6 relative">
         <div className="mb-4">
           <h3 className="text-xl md:text-2xl font-bold text-white mb-2 text-balance">
-            {title}
+            {t(`${itemKey}.title`)}
           </h3>
-          <p className="text-xs md:text-sm text-primary font-medium mb-3">{role}</p>
+          <p className="text-xs md:text-sm text-primary font-medium mb-3">
+            {t(`${itemKey}.role`)}
+          </p>
           <p className="text-sm md:text-base text-muted leading-relaxed text-pretty">
-            {description}
+            {t(`${itemKey}.description`)}
           </p>
         </div>
 
@@ -93,27 +96,30 @@ export function ProjectCard({
                   className="gradient-primary hover:opacity-90 text-background font-semibold border-0"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  {links.status === "update-notice" ? "Ver en Top.gg" : "Demo en Vivo"}
+                  {links.status === "update-notice"
+                    ? dt("topgg.action")
+                    : t("liveDemo")}
                 </Button>
               </DialogTrigger>
               {links.status === "update-notice" && (
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>Aviso de Estado del Bot</DialogTitle>
+                    <DialogTitle>{dt("topgg.title")}</DialogTitle>
                     <DialogDescription className="pt-4">
-                      <p className="mb-4">
-                        Mankekito se encuentra actualmente en una gran actualización. Si bien el código original está deprecado y el bot está temporalmente fuera de línea, aún puedes ver su perfil en Top.gg, una plataforma profesional de listado de bots de Discord.
-                      </p>
-                      <p className="mb-4">
-                        El bot logró estado de verificación oficial y sirvió a más de 10,000 usuarios en más de 260 servidores durante su período activo. Una nueva versión con características mejoradas y arquitectura moderna está en desarrollo.
-                      </p>
+                      {(dt.raw("topgg.paragraphs") as string[]).map(
+                        (paragraph: string, i: number) => (
+                          <p key={i} className="mb-4">
+                            {paragraph}
+                          </p>
+                        )
+                      )}
                       <div className="flex justify-end gap-3 mt-6">
                         <DialogTrigger asChild>
                           <Button
                             variant="outline"
                             className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
                           >
-                            Cancelar
+                            {dt("cancel")}
                           </Button>
                         </DialogTrigger>
                         <Button
@@ -122,7 +128,7 @@ export function ProjectCard({
                         >
                           <a href={links.live} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4 mr-2" />
-                            Ver en Top.gg
+                            {dt("topgg.action")}
                           </a>
                         </Button>
                       </div>
@@ -141,7 +147,7 @@ export function ProjectCard({
             >
               <a href={links.github} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" />
-                Código
+                {t("code")}
               </a>
             </Button>
           )}
@@ -154,29 +160,27 @@ export function ProjectCard({
                   className="border-primary/30 text-white hover:bg-primary/10 bg-transparent group"
                 >
                   <Code2 className="w-4 h-4 mr-2" />
-                  Aplicación Web
+                  {t("webApp")}
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Aviso de Funcionalidad Limitada</DialogTitle>
+                  <DialogTitle>{dt("webapp.title")}</DialogTitle>
                   <DialogDescription className="pt-4">
-                    <p className="mb-4">
-                      Por favor, ten en cuenta que esta aplicación web actualmente opera con funcionalidad limitada ya que es parte de un proyecto académico.
-                    </p>
-                    <p className="mb-4">
-                      Si bien puedes explorar el código del frontend y la arquitectura, la integración del backend está intencionalmente restringida debido a requisitos académicos y consideraciones de propiedad intelectual.
-                    </p>
-                    <p className="mb-4">
-                      ¿Te gustaría proceder a ver el repositorio del frontend?
-                    </p>
+                    {(dt.raw("webapp.paragraphs") as string[]).map(
+                      (paragraph: string, i: number) => (
+                        <p key={i} className="mb-4">
+                          {paragraph}
+                        </p>
+                      )
+                    )}
                     <div className="flex justify-end gap-3 mt-6">
                       <DialogTrigger asChild>
                         <Button
                           variant="outline"
                           className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
                         >
-                          Cancelar
+                          {dt("cancel")}
                         </Button>
                       </DialogTrigger>
                       <Button
@@ -185,7 +189,7 @@ export function ProjectCard({
                       >
                         <a href={links.webApp} target="_blank" rel="noopener noreferrer">
                           <Code2 className="w-4 h-4 mr-2" />
-                          Ver Repositorio
+                          {dt("viewRepository")}
                         </a>
                       </Button>
                     </div>
@@ -203,7 +207,7 @@ export function ProjectCard({
             >
               <a href={links.backend} target="_blank" rel="noopener noreferrer">
                 <Server className="w-4 h-4 mr-2" />
-                Backend
+                {t("backend")}
               </a>
             </Button>
           )}
@@ -216,22 +220,20 @@ export function ProjectCard({
                   className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
                 >
                   <Smartphone className="w-4 h-4 mr-2" />
-                  Aplicación Móvil
+                  {t("mobileApp")}
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Aviso de Proyecto Académico</DialogTitle>
+                  <DialogTitle>{dt("mobile.title")}</DialogTitle>
                   <DialogDescription className="pt-4">
-                    <p className="mb-4">
-                      El componente de aplicación móvil de este proyecto actualmente es privado debido a requisitos académicos y consideraciones de propiedad intelectual.
-                    </p>
-                    <p className="mb-4">
-                      Si bien la aplicación web y los servicios backend están disponibles para visualización pública, el código fuente de la aplicación móvil permanece protegido. Sin embargo, aún puedes explorar la arquitectura y características a través de los otros componentes del sistema.
-                    </p>
-                    <p>
-                      Siéntete libre de consultar la aplicación web y los repositorios backend para entender la arquitectura e implementación del sistema.
-                    </p>
+                    {(dt.raw("mobile.paragraphs") as string[]).map(
+                      (paragraph: string, i: number) => (
+                        <p key={i} className="mb-4">
+                          {paragraph}
+                        </p>
+                      )
+                    )}
                   </DialogDescription>
                 </DialogHeader>
               </DialogContent>
@@ -245,7 +247,7 @@ export function ProjectCard({
             >
               <a href={links.mobileApp} target="_blank" rel="noopener noreferrer">
                 <Smartphone className="w-4 h-4 mr-2" />
-                Aplicación Móvil
+                {t("mobileApp")}
               </a>
             </Button>
           )}
