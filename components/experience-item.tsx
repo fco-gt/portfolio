@@ -22,6 +22,7 @@ export function ExperienceItem({
   return (
     <motion.div
       variants={slideUp}
+      whileHover={{ y: -2, transition: { duration: 0.3 } }}
       className="relative pl-8 pb-12 border-l-2 border-border last:pb-0"
     >
       {/* Timeline dot */}

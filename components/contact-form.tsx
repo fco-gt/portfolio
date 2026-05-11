@@ -10,11 +10,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { profile } from "@/data/profile";
 import { slideUp, staggerChildren } from "@/utils/motion";
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useTranslations } from "next-intl";
 
 export function ContactForm() {
-  const { ref, isVisible } = useScrollReveal();
   const t = useTranslations("contact");
   const [formData, setFormData] = useState({
     name: "",
@@ -51,14 +49,16 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" ref={ref} className="py-24">
+    <motion.section
+      id="contact"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={staggerChildren}
+      className="py-24"
+    >
       <div className="container mx-auto px-4 max-w-6xl">
-        <motion.div
-          initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
-          variants={staggerChildren}
-          className="grid md:grid-cols-2 gap-12"
-        >
+        <motion.div variants={staggerChildren} className="grid md:grid-cols-2 gap-12">
           <div>
             <motion.h2
               variants={slideUp}
@@ -181,6 +181,6 @@ export function ContactForm() {
           </motion.form>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

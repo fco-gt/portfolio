@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
+import { JetBrains_Mono } from "next/font/google";
 import { IntlProvider } from "@/components/intl-provider";
 import "../globals.css";
 
@@ -54,15 +55,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: Props) {
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
+
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale} className={`${jetBrainsMono.className} scroll-smooth`}>
       <body className="font-sans antialiased">
         <IntlProvider locale={locale} messages={messages}>
           {children}

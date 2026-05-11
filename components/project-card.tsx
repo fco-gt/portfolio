@@ -45,6 +45,7 @@ export function ProjectCard({
     <motion.div
       variants={scaleIn}
       whileHover={{ y: -5 }}
+      transition={{ duration: 0.3 }}
       className="group relative bg-surface border border-border rounded-lg overflow-hidden hover:border-primary/30 transition-all"
     >
       <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />

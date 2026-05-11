@@ -56,3 +56,32 @@ export const hoverScale = {
 export const tapScale = {
   scale: 0.98,
 };
+
+// Parallax effect for hero background blobs
+export const parallaxBlob = (speed: number = 0.5) => ({
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 0.3,
+    transition: { duration: 0.8 },
+  },
+});
+
+// Dialog enter/exit transition for AnimatePresence
+export const dialogAnimation = {
+  initial: { opacity: 0, scale: 0.95 },
+  animate: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0.95 },
+  transition: { duration: 0.2, ease: "easeOut" },
+};
+
+// Enhanced stagger with different timing
+export const staggerFast = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.1,
+    },
+  },
+};
