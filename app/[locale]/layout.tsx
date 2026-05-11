@@ -1,8 +1,12 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
-import { JetBrains_Mono } from "next/font/google";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import { IntlProvider } from "@/components/intl-provider";
 import "../globals.css";
 
@@ -55,9 +59,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-body",
+});
+
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
+  variable: "--font-display",
 });
 
 export default async function LocaleLayout({ children, params }: Props) {
@@ -66,8 +76,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${jetBrainsMono.className} scroll-smooth`}>
-      <body className="font-sans antialiased">
+    <html lang={locale} className={`${dmSans.variable} ${jetBrainsMono.variable} scroll-smooth dark`}>
+      <body className="antialiased">
         <IntlProvider locale={locale} messages={messages}>
           {children}
         </IntlProvider>

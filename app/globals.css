@@ -4,97 +4,69 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --primary: #00c87a;
-  --primary-600: #00a662;
-  --background: #0b1020;
-  --surface: #0f1724;
-  --muted: #94a3b8;
-  --white: #ffffff;
-  --foreground: #e2e8f0;
-  --card: #0f1724;
-  --card-foreground: #e2e8f0;
-  --border: #1e293b;
-  --input: #1e293b;
-  --ring: #00c87a;
-  --radius: 0.75rem;
-
-  --gradient-primary: linear-gradient(135deg, #00c87a 0%, #00a662 100%);
-  --gradient-hero: linear-gradient(
-    135deg,
-    #00c87a 0%,
-    #0891b2 50%,
-    #6366f1 100%
-  );
-  --gradient-card: linear-gradient(
-    135deg,
-    rgba(0, 200, 122, 0.1) 0%,
-    rgba(99, 102, 241, 0.05) 100%
-  );
-  --gradient-accent: linear-gradient(90deg, #00c87a 0%, #0891b2 100%);
+  --color-bg: #000000;
+  --color-fg: #e0e0e0;
+  --color-heading: #ffffff;
+  --color-accent: #00ff88;
+  --color-surface: #0a0a0a;
+  --color-border: #1a1a1a;
+  --color-grid: rgba(255, 255, 255, 0.03);
+  --grid-size: 40px;
+  --radius: 0;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --background: 0 0% 0%;
+  --foreground: 0 0% 88%;
+  --card: 0 0% 4%;
+  --card-foreground: 0 0% 88%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 88%;
+  --primary: 150 100% 50%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 4%;
+  --secondary-foreground: 0 0% 88%;
+  --muted: 0 0% 4%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 150 100% 50%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 10%;
+  --input: 0 0% 10%;
+  --ring: 150 100% 50%;
+  --chart-1: 150 100% 50%;
+  --chart-2: 0 0% 88%;
+  --chart-3: 0 0% 60%;
+  --chart-4: 0 0% 40%;
+  --chart-5: 0 0% 20%;
+  --sidebar: 0 0% 4%;
+  --sidebar-foreground: 0 0% 88%;
+  --sidebar-primary: 150 100% 50%;
+  --sidebar-primary-foreground: 0 0% 0%;
+  --sidebar-accent: 150 100% 50%;
+  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-border: 0 0% 10%;
+  --sidebar-ring: 150 100% 50%;
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
-  --color-primary: var(--primary);
-  --color-primary-600: var(--primary-600);
-  --color-background: var(--background);
-  --color-surface: var(--surface);
-  --color-muted: var(--muted);
-  --color-white: var(--white);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
+  --font-body: var(--font-body);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-display);
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-fg);
+  --color-heading: var(--color-heading);
+  --color-accent: var(--color-accent);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+  --color-primary: var(--color-accent);
+  --color-ring: var(--color-accent);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
@@ -104,73 +76,78 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
   }
-
-  /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 10px;
   }
-
   ::-webkit-scrollbar-track {
-    background: var(--background);
+    background: var(--color-bg);
   }
-
   ::-webkit-scrollbar-thumb {
-    background: var(--surface);
-    border-radius: 5px;
+    background: var(--color-surface);
   }
-
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-600);
+    background: var(--color-accent);
   }
 }
 
-/* Added utility classes for gradient effects */
+/* Texture & utility classes */
 @layer utilities {
-  .gradient-primary {
-    background: var(--gradient-primary);
+  .grid-overlay {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent calc(var(--grid-size, 40px) - 1px),
+        var(--color-grid, rgba(255, 255, 255, 0.03)) calc(var(--grid-size, 40px) - 1px),
+        var(--color-grid, rgba(255, 255, 255, 0.03)) var(--grid-size, 40px)
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent calc(var(--grid-size, 40px) - 1px),
+        var(--color-grid, rgba(255, 255, 255, 0.03)) calc(var(--grid-size, 40px) - 1px),
+        var(--color-grid, rgba(255, 255, 255, 0.03)) var(--grid-size, 40px)
+      );
   }
 
-  .gradient-hero {
-    background: var(--gradient-hero);
-  }
-
-  .gradient-card {
-    background: var(--gradient-card);
-  }
-
-  .gradient-accent {
-    background: var(--gradient-accent);
-  }
-
-  .gradient-text {
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .gradient-border {
-    position: relative;
-    background: var(--surface);
-  }
-
-  .gradient-border::before {
+  body.scan-line::after {
     content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: var(--gradient-accent);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.3) 2px,
+      rgba(0, 0, 0, 0.3) 4px
+    );
   }
+
+  .diagonal-right {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  }
+
+  .diagonal-left {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
 }
 
 /* Reduced motion support */

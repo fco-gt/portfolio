@@ -12,10 +12,18 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <ExperienceSection />
-        <SkillsList />
-        <ProjectsSection />
-        <ContactForm />
+        <div className="diagonal-right">
+          <ExperienceSection />
+        </div>
+        <div className="diagonal-left">
+          <SkillsList />
+        </div>
+        <div className="diagonal-right">
+          <ProjectsSection />
+        </div>
+        <div className="diagonal-left">
+          <ContactForm />
+        </div>
       </main>
       <Footer />
     </div>

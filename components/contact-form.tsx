@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { profile } from "@/data/profile";
-import { slideUp, staggerChildren } from "@/utils/motion";
+import { fadeIn } from "@/utils/motion";
 import { useTranslations } from "next-intl";
 
 export function ContactForm() {
@@ -54,48 +54,35 @@ export function ContactForm() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      variants={staggerChildren}
+      variants={fadeIn}
       className="py-24"
     >
-      <div className="container mx-auto px-4 max-w-6xl">
-        <motion.div variants={staggerChildren} className="grid md:grid-cols-2 gap-12">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <motion.h2
-              variants={slideUp}
-              className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
-            >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
               {t("title")}
-            </motion.h2>
+            </h2>
 
-            <motion.p
-              variants={slideUp}
-              className="text-lg text-muted mb-8 text-pretty"
-            >
+            <p className="text-lg text-[#e0e0e0] mb-8 text-pretty">
               {t("subtitle")}
-            </motion.p>
+            </p>
 
-            <motion.div variants={slideUp} className="space-y-4">
-              <div className="flex items-center gap-3 text-muted">
-                <Mail className="w-5 h-5 text-primary" />
-                <a
-                  href={`mailto:${profile.email}`}
-                  className="hover:text-primary transition-colors"
-                >
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-[#999]">
+                <Mail className="w-5 h-5 text-[#00ff88]" />
+                <a href={`mailto:${profile.email}`} className="text-[#999]">
                   {profile.email}
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-muted">
-                <MapPin className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-3 text-[#999]">
+                <MapPin className="w-5 h-5 text-[#00ff88]" />
                 <span>{profile.location}</span>
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.form
-            variants={slideUp}
-            onSubmit={handleSubmit}
-            className="space-y-6"
-          >
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
                 htmlFor="name"
@@ -111,7 +98,7 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="bg-surface border-border text-white"
+                className="!rounded-none border-2 border-[#1a1a1a] bg-[#0a0a0a] text-white"
                 placeholder={t("namePlaceholder")}
               />
             </div>
@@ -131,7 +118,7 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="bg-surface border-border text-white"
+                className="!rounded-none border-2 border-[#1a1a1a] bg-[#0a0a0a] text-white"
                 placeholder={t("emailPlaceholder")}
               />
             </div>
@@ -151,7 +138,7 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="bg-surface border-border text-white resize-none"
+                className="!rounded-none border-2 border-[#1a1a1a] bg-[#0a0a0a] text-white resize-none"
                 placeholder={t("messagePlaceholder")}
               />
             </div>
@@ -160,7 +147,7 @@ export function ContactForm() {
               type="submit"
               size="lg"
               disabled={status === "loading"}
-              className="w-full bg-primary hover:bg-primary-600 text-background font-semibold"
+              className="!rounded-none border-2 border-[#00ff88] bg-[#00ff88] text-black hover:bg-[#00ff88]/90 w-full"
             >
               {status === "loading" ? (
                 t("sending")
@@ -173,13 +160,13 @@ export function ContactForm() {
             </Button>
 
             {status === "success" && (
-              <p className="text-primary text-sm">{t("success")}</p>
+              <p className="text-[#00ff88] text-sm">{t("success")}</p>
             )}
             {status === "error" && (
               <p className="text-red-500 text-sm">{t("error")}</p>
             )}
-          </motion.form>
-        </motion.div>
+          </form>
+        </div>
       </div>
     </motion.section>
   );

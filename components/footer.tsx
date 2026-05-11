@@ -16,13 +16,13 @@ export function Footer() {
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeIn}
-      className="py-12 border-t border-border"
+      className="py-12 border-t-2 border-[#1a1a1a]"
     >
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <p className="text-white font-semibold mb-1">{profile.name}</p>
-            <p className="text-muted text-sm">{t("title")}</p>
+            <p className="text-[#999] text-sm">{t("title")}</p>
           </div>
 
           <div className="flex items-center gap-6">
@@ -30,7 +30,7 @@ export function Footer() {
               href={profile.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-primary transition-colors"
+              className="text-[#999]"
               aria-label={common("github")}
             >
               <Github className="w-5 h-5" />
@@ -39,14 +39,14 @@ export function Footer() {
               href={profile.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-primary transition-colors"
+              className="text-[#999]"
               aria-label={common("linkedin")}
             >
               <Linkedin className="w-5 h-5" />
             </a>
           </div>
 
-          <p className="text-muted text-sm">
+          <p className="text-[#999] text-sm">
             © {new Date().getFullYear()} {t("copyright")}
           </p>
         </div>

@@ -44,13 +44,9 @@ export function ProjectCard({
   return (
     <motion.div
       variants={scaleIn}
-      whileHover={{ y: -5 }}
-      transition={{ duration: 0.3 }}
-      className="group relative bg-surface border border-border rounded-lg overflow-hidden hover:border-primary/30 transition-all"
+      className="relative border-2 border-[#1a1a1a] rounded-none overflow-hidden"
     >
-      <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-
-      <div className="relative h-48 md:h-64 overflow-hidden bg-background">
+      <div className="relative h-48 md:h-64 overflow-hidden bg-[#000]">
         <Image
           src={image || "/placeholder.svg"}
           alt={t(`${itemKey}.title`)}
@@ -58,21 +54,21 @@ export function ProjectCard({
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {featured && (
-          <div className="absolute top-4 right-4 px-3 py-1 gradient-primary text-background text-xs font-bold rounded-full">
+          <div className="absolute top-4 right-4 px-3 py-1 border border-[#00ff88] text-[#00ff88] text-xs font-bold">
             {t("featured")}
           </div>
         )}
       </div>
 
-      <div className="p-4 md:p-6 relative">
+      <div className="p-4 md:p-6">
         <div className="mb-4">
           <h3 className="text-xl md:text-2xl font-bold text-white mb-2 text-balance">
             {t(`${itemKey}.title`)}
           </h3>
-          <p className="text-xs md:text-sm text-primary font-medium mb-3">
+          <p className="text-xs md:text-sm text-[#00ff88] font-medium mb-3">
             {t(`${itemKey}.role`)}
           </p>
-          <p className="text-sm md:text-base text-muted leading-relaxed text-pretty">
+          <p className="text-sm md:text-base text-[#999] leading-relaxed text-pretty">
             {t(`${itemKey}.description`)}
           </p>
         </div>
@@ -81,7 +77,7 @@ export function ProjectCard({
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 bg-background/50 backdrop-blur-sm border border-primary/20 rounded-full text-primary text-xs font-medium hover:border-primary/40 transition-colors"
+              className="px-3 py-1 border border-[#1a1a1a] text-[#00ff88] text-xs font-medium"
             >
               {tech}
             </span>
@@ -94,7 +90,7 @@ export function ProjectCard({
               <DialogTrigger asChild>
                 <Button
                   size="sm"
-                  className="gradient-primary hover:opacity-90 text-background font-semibold border-0"
+                  className="!rounded-none border-2 border-[#00ff88] bg-[#00ff88] text-black hover:bg-[#00ff88]/90"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   {links.status === "update-notice"
@@ -118,14 +114,14 @@ export function ProjectCard({
                         <DialogTrigger asChild>
                           <Button
                             variant="outline"
-                            className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
+                            className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
                           >
                             {dt("cancel")}
                           </Button>
                         </DialogTrigger>
                         <Button
                           asChild
-                          className="gradient-primary hover:opacity-90 text-background font-semibold border-0"
+                          className="!rounded-none border-2 border-[#00ff88] bg-[#00ff88] text-black hover:bg-[#00ff88]/90"
                         >
                           <a href={links.live} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4 mr-2" />
@@ -144,7 +140,7 @@ export function ProjectCard({
               asChild
               size="sm"
               variant="outline"
-              className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
+              className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
             >
               <a href={links.github} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" />
@@ -158,7 +154,7 @@ export function ProjectCard({
                 <Button
                   size="sm"
                   variant="outline"
-                  className="border-primary/30 text-white hover:bg-primary/10 bg-transparent group"
+                  className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
                 >
                   <Code2 className="w-4 h-4 mr-2" />
                   {t("webApp")}
@@ -179,14 +175,14 @@ export function ProjectCard({
                       <DialogTrigger asChild>
                         <Button
                           variant="outline"
-                          className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
+                          className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
                         >
                           {dt("cancel")}
                         </Button>
                       </DialogTrigger>
                       <Button
                         asChild
-                        className="gradient-primary hover:opacity-90 text-background font-semibold border-0"
+                        className="!rounded-none border-2 border-[#00ff88] bg-[#00ff88] text-black hover:bg-[#00ff88]/90"
                       >
                         <a href={links.webApp} target="_blank" rel="noopener noreferrer">
                           <Code2 className="w-4 h-4 mr-2" />
@@ -204,7 +200,7 @@ export function ProjectCard({
               asChild
               size="sm"
               variant="outline"
-              className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
+              className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
             >
               <a href={links.backend} target="_blank" rel="noopener noreferrer">
                 <Server className="w-4 h-4 mr-2" />
@@ -218,7 +214,7 @@ export function ProjectCard({
                 <Button
                   size="sm"
                   variant="outline"
-                  className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
+                  className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
                 >
                   <Smartphone className="w-4 h-4 mr-2" />
                   {t("mobileApp")}
@@ -244,7 +240,7 @@ export function ProjectCard({
               asChild
               size="sm"
               variant="outline"
-              className="border-primary/30 text-white hover:bg-primary/10 bg-transparent"
+              className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
             >
               <a href={links.mobileApp} target="_blank" rel="noopener noreferrer">
                 <Smartphone className="w-4 h-4 mr-2" />

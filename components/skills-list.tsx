@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { skills } from "@/data/profile";
-import { slideUp, staggerChildren } from "@/utils/motion";
+import { fadeIn } from "@/utils/motion";
 import { useTranslations } from "next-intl";
 
 export function SkillsList() {
@@ -14,56 +14,38 @@ export function SkillsList() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      variants={staggerChildren}
-      className="py-24 bg-surface/50 relative overflow-hidden"
+      variants={fadeIn}
+      className="py-24 relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
+      <div className="container mx-auto px-4 relative">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
+          {t("title")}
+        </h2>
 
-      <div className="container mx-auto px-4 max-w-6xl relative">
-        <motion.div variants={staggerChildren}>
-          <motion.h2
-            variants={slideUp}
-            className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance"
-          >
-            {t("title")}
-          </motion.h2>
+        <p className="text-lg text-[#e0e0e0] mb-12 max-w-2xl text-pretty">
+          {t("subtitle")}
+        </p>
 
-          <motion.p
-            variants={slideUp}
-            className="text-lg text-muted mb-12 max-w-2xl text-pretty"
-          >
-            {t("subtitle")}
-          </motion.p>
-
-          <motion.div
-            variants={staggerChildren}
-            className="grid gap-4 grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
-          >
-            {skills.map((skill) => (
-              <motion.div
-                key={skill.name}
-                variants={slideUp}
-                whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-                className="relative p-4 md:p-6 bg-surface border border-border rounded-lg hover:border-primary/30 transition-colors group"
-              >
-                <div className="absolute inset-0 gradient-card opacity-0 group-hover:opacity-100 transition-opacity rounded-lg pointer-events-none" />
-                <div className="relative">
-                  <div className="flex items-center gap-2 mb-2">
-                    {skill.icon && (
-                      <skill.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
-                    )}
-                    <h3 className="text-xl font-semibold text-white">
-                      {skill.name}
-                    </h3>
-                  </div>
-                  <p className="text-muted text-xs md:text-sm leading-relaxed hidden md:block">
-                    {skill.context}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+        <div className="grid gap-4 grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+          {skills.map((skill, index) => (
+            <div
+              key={skill.name}
+              className={`p-4 md:p-6 border-2 border-[#1a1a1a] rounded-none bg-[#0a0a0a]${index % 3 === 0 ? " lg:col-span-2" : ""}`}
+            >
+              <div className="flex items-center gap-2 mb-2">
+                {skill.icon && (
+                  <skill.icon className="w-5 h-5 text-[#00ff88]" strokeWidth={1.5} />
+                )}
+                <h3 className="text-xl font-semibold text-white">
+                  {skill.name}
+                </h3>
+              </div>
+              <p className="text-[#999] text-xs md:text-sm leading-relaxed hidden md:block">
+                {skill.context}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </motion.section>
   );
