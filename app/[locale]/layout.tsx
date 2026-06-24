@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
-import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Montserrat, Inter, JetBrains_Mono } from "next/font/google";
 import { IntlProvider } from "@/components/intl-provider";
 import "../globals.css";
 
@@ -59,15 +59,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const dmSans = DM_Sans({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-body",
+  weight: ["600", "700", "800"],
+  variable: "--font-montserrat",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-inter",
 });
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-display",
+  weight: ["500"],
+  variable: "--font-jetbrains",
 });
 
 export default async function LocaleLayout({ children, params }: Props) {
@@ -76,9 +83,12 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${dmSans.variable} ${jetBrainsMono.variable} scroll-smooth dark`}>
+    <html
+      lang={locale}
+      className={`${montserrat.variable} ${inter.variable} ${jetBrainsMono.variable} scroll-smooth dark`}
+    >
       <body className="antialiased">
-        <IntlProvider locale={locale} messages={messages}>
+        <IntlProvider locale={locale} messages={messages} timeZone="America/Santiago">
           {children}
         </IntlProvider>
         <Analytics />
