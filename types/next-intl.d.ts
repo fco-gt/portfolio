@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // Type augmentation to bypass use-intl/core.d.ts resolution issues
 // The actual exports exist at runtime - this provides the static types.
 
