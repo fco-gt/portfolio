@@ -1,56 +1,48 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Github, Linkedin } from "lucide-react";
 import { profile } from "@/data/profile";
-import { fadeIn } from "@/utils/motion";
 import { useTranslations } from "next-intl";
 
 export function Footer() {
   const t = useTranslations("footer");
-  const common = useTranslations("common");
+  const tc = useTranslations("common");
 
   return (
-    <motion.footer
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={fadeIn}
-      className="py-12 border-t-2 border-[#1a1a1a]"
-    >
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
-            <p className="text-white font-semibold mb-1">{profile.name}</p>
-            <p className="text-[#999] text-sm">{t("title")}</p>
+    <footer className="bg-[#071105] border-t border-[#3c4b35] py-12">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          {/* Brand */}
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-[#dae6d0] tracking-tighter">
+              FCO-GT
+            </h2>
+            <div className="hidden md:block w-px h-6 bg-[#3c4b35]"></div>
+            <p className="text-[#baccb0] text-sm opacity-60">
+              © {new Date().getFullYear()} Francisco Gutierrez. {t("copyright")}
+            </p>
           </div>
 
-          <div className="flex items-center gap-6">
+          {/* Nav */}
+          <div className="flex flex-wrap justify-center gap-8">
             <a
-              href={profile.social.github}
+              href="https://github.com/fco-gt/portfolio"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#999]"
-              aria-label={common("github")}
+              className="label-caps text-[10px] text-[#baccb0] hover:text-[#39ff14] transition-all hover:underline underline-offset-4"
             >
-              <Github className="w-5 h-5" />
+              {tc("repository")}
             </a>
             <a
               href={profile.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#999]"
-              aria-label={common("linkedin")}
+              className="label-caps text-[10px] text-[#baccb0] hover:text-[#39ff14] transition-all hover:underline underline-offset-4"
             >
-              <Linkedin className="w-5 h-5" />
+              {tc("linkedin")}
             </a>
           </div>
-
-          <p className="text-[#999] text-sm">
-            © {new Date().getFullYear()} {t("copyright")}
-          </p>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }

@@ -1,43 +1,37 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { experience } from "@/data/profile";
 import { ExperienceItem } from "./experience-item";
-import { fadeIn } from "@/utils/motion";
 import { useTranslations } from "next-intl";
-
 export function ExperienceSection() {
   const t = useTranslations("experience");
-
   return (
-    <motion.section
+    <section
       id="experience"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={fadeIn}
-      className="py-12 md:py-24"
+      className="py-24 w-full max-w-7xl mx-auto px-5 md:px-6"
     >
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          {t("title")}
-        </h2>
-
-        <p className="text-lg text-[#999] mb-12 max-w-2xl">
-          {t("subtitle")}
-        </p>
-
-        <div>
-          {experience.map((exp) => (
-            <ExperienceItem
-              key={exp.id}
-              id={exp.id}
-              company={exp.company}
-              technologies={exp.technologies}
-            />
-          ))}
-        </div>
+      {/* Section Header */}
+      <div className="flex items-center gap-8 mb-16">
+        <h2
+          className="text-4xl md:text-5xl font-bold text-[#dae6d0] whitespace-nowrap"
+          dangerouslySetInnerHTML={{ __html: t.raw("heading") }}
+        />
+        <div className="h-px grow bg-[#3c4b35]"></div>
       </div>
-    </motion.section>
+
+      {/* Timeline Wrapper */}
+      <div className="relative nn-timeline mb-24">
+        {experience.map((exp) => (
+          <ExperienceItem
+            key={exp.id}
+            id={exp.id}
+            company={exp.company}
+            technologies={exp.technologies}
+            location={exp.location}
+            modalities={exp.modalities}
+          />
+        ))}
+      </div>
+    </section>
   );
 }

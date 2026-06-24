@@ -2,17 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ExternalLink, Github, Code2, Smartphone, Server } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { scaleIn } from "@/utils/motion";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { ExternalLink, Github } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
@@ -20,12 +10,8 @@ interface ProjectCardProps {
   image: string;
   technologies: string[];
   links: {
-    live?: string;
     github?: string;
-    webApp?: string;
-    backend?: string;
-    mobileApp?: string;
-    status?: "update-notice";
+    docs?: string;
   };
   featured?: boolean;
 }
@@ -38,218 +24,80 @@ export function ProjectCard({
   featured,
 }: ProjectCardProps) {
   const t = useTranslations("projects");
-  const dt = useTranslations("projectDialogs");
+  const tc = useTranslations("common");
   const itemKey = `item${id}`;
 
   return (
     <motion.div
-      variants={scaleIn}
-      className="relative border-2 border-[#1a1a1a] rounded-none overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className={`group relative nn-card overflow-hidden rounded-lg ${
+        featured ? "md:col-span-2" : ""
+      }`}
     >
-      <div className="relative h-48 md:h-64 overflow-hidden bg-[#000]">
+      {/* Image Container */}
+      <div className="relative h-64 md:h-80 overflow-hidden bg-[#000]">
         <Image
           src={image || "/placeholder.svg"}
           alt={t(`${itemKey}.title`)}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:opacity-60"
         />
-        {featured && (
-          <div className="absolute top-4 right-4 px-3 py-1 border border-[#00ff88] text-[#00ff88] text-xs font-bold">
-            {t("featured")}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#000] via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+        
+        {/* Overlay content on hover */}
+        <div className="absolute inset-0 p-8 flex flex-col justify-end translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          <div className="flex gap-2 mb-4">
+            {technologies.slice(0, 3).map((tech) => (
+              <span
+                key={tech}
+                className="text-[9px] label-caps border border-[#39ff14]/30 text-[#39ff14] bg-[#0c1609]/80 px-2 py-0.5 rounded-sm"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
-        )}
-      </div>
-
-      <div className="p-4 md:p-6">
-        <div className="mb-4">
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-2 text-balance">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#dae6d0] mb-2 leading-none">
             {t(`${itemKey}.title`)}
           </h3>
-          <p className="text-xs md:text-sm text-[#00ff88] font-medium mb-3">
-            {t(`${itemKey}.role`)}
-          </p>
-          <p className="text-sm md:text-base text-[#999] leading-relaxed text-pretty">
+          <p className="text-[#baccb0] text-sm line-clamp-2 mb-6">
             {t(`${itemKey}.description`)}
           </p>
-        </div>
-
-        <div className="flex flex-wrap gap-2 mb-6">
-          {technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 border border-[#1a1a1a] text-[#00ff88] text-xs font-medium"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap gap-3">
-          {links.live && (
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button
-                  size="sm"
-                  className="!rounded-none border-2 border-[#00ff88] bg-[#00ff88] text-black hover:bg-[#00ff88]/90"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  {links.status === "update-notice"
-                    ? dt("topgg.action")
-                    : t("liveDemo")}
-                </Button>
-              </DialogTrigger>
-              {links.status === "update-notice" && (
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>{dt("topgg.title")}</DialogTitle>
-                    <DialogDescription className="pt-4">
-                      {(dt.raw("topgg.paragraphs") as string[]).map(
-                        (paragraph: string, i: number) => (
-                          <p key={i} className="mb-4">
-                            {paragraph}
-                          </p>
-                        )
-                      )}
-                      <div className="flex justify-end gap-3 mt-6">
-                        <DialogTrigger asChild>
-                          <Button
-                            variant="outline"
-                            className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
-                          >
-                            {dt("cancel")}
-                          </Button>
-                        </DialogTrigger>
-                        <Button
-                          asChild
-                          className="!rounded-none border-2 border-[#00ff88] bg-[#00ff88] text-black hover:bg-[#00ff88]/90"
-                        >
-                          <a href={links.live} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            {dt("topgg.action")}
-                          </a>
-                        </Button>
-                      </div>
-                    </DialogDescription>
-                  </DialogHeader>
-                </DialogContent>
-              )}
-            </Dialog>
-          )}
-          {links.github && (
-            <Button
-              asChild
-              size="sm"
-              variant="outline"
-              className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
-            >
-              <a href={links.github} target="_blank" rel="noopener noreferrer">
-                <Github className="w-4 h-4 mr-2" />
-                {t("code")}
+          
+          <div className="flex items-center gap-4">
+            {links.docs && (
+              <a
+                href={links.docs}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#39ff14] label-caps text-[10px] flex items-center gap-2 hover:underline"
+              >
+                {tc("viewDetails")} <ExternalLink className="w-3 h-3" />
               </a>
-            </Button>
-          )}
-          {links.webApp && (
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
-                >
-                  <Code2 className="w-4 h-4 mr-2" />
-                  {t("webApp")}
-                </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>{dt("webapp.title")}</DialogTitle>
-                  <DialogDescription className="pt-4">
-                    {(dt.raw("webapp.paragraphs") as string[]).map(
-                      (paragraph: string, i: number) => (
-                        <p key={i} className="mb-4">
-                          {paragraph}
-                        </p>
-                      )
-                    )}
-                    <div className="flex justify-end gap-3 mt-6">
-                      <DialogTrigger asChild>
-                        <Button
-                          variant="outline"
-                          className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
-                        >
-                          {dt("cancel")}
-                        </Button>
-                      </DialogTrigger>
-                      <Button
-                        asChild
-                        className="!rounded-none border-2 border-[#00ff88] bg-[#00ff88] text-black hover:bg-[#00ff88]/90"
-                      >
-                        <a href={links.webApp} target="_blank" rel="noopener noreferrer">
-                          <Code2 className="w-4 h-4 mr-2" />
-                          {dt("viewRepository")}
-                        </a>
-                      </Button>
-                    </div>
-                  </DialogDescription>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
-          )}
-          {links.backend && (
-            <Button
-              asChild
-              size="sm"
-              variant="outline"
-              className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
-            >
-              <a href={links.backend} target="_blank" rel="noopener noreferrer">
-                <Server className="w-4 h-4 mr-2" />
-                {t("backend")}
+            )}
+            {links.github && (
+              <a
+                href={links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#dae6d0] label-caps text-[10px] flex items-center gap-2 hover:text-[#39ff14] transition-colors"
+              >
+                {tc("code")} <Github className="w-3 h-3" />
               </a>
-            </Button>
-          )}
-          {links.mobileApp === "Private - Academic Project" ? (
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
-                >
-                  <Smartphone className="w-4 h-4 mr-2" />
-                  {t("mobileApp")}
-                </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>{dt("mobile.title")}</DialogTitle>
-                  <DialogDescription className="pt-4">
-                    {(dt.raw("mobile.paragraphs") as string[]).map(
-                      (paragraph: string, i: number) => (
-                        <p key={i} className="mb-4">
-                          {paragraph}
-                        </p>
-                      )
-                    )}
-                  </DialogDescription>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
-          ) : links.mobileApp && (
-            <Button
-              asChild
-              size="sm"
-              variant="outline"
-              className="!rounded-none border-2 border-[#1a1a1a] text-[#999] hover:bg-[#0a0a0a] bg-transparent"
-            >
-              <a href={links.mobileApp} target="_blank" rel="noopener noreferrer">
-                <Smartphone className="w-4 h-4 mr-2" />
-                {t("mobileApp")}
-              </a>
-            </Button>
-          )}
+            )}
+          </div>
         </div>
       </div>
+
+      {/* Featured Badge */}
+      {featured && (
+        <div className="absolute top-6 left-6 z-20">
+          <span className="label-caps text-[10px] bg-[#39ff14] text-[#022100] px-3 py-1 rounded-full font-bold">
+            {tc("featuredProject")}
+          </span>
+        </div>
+      )}
     </motion.div>
   );
 }
