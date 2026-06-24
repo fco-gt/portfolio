@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Full-stack developer portfolio focused on backend architecture with Node.js, TypeScript, and Golang. Built with Next.js 15, Tailwind CSS v4, and shadcn/ui. Dual-language (EN/ES).
 
-First, run the development server:
+## Desing
+
+The website use a Neon Green and Black color palette, you can change this in the globals.css file
+
+## Tech Stack
+
+| Layer                | Choice                  |
+| -------------------- | ----------------------- |
+| Framework            | Next.js 15 (App Router) |
+| Styling              | Tailwind CSS v4         |
+| UI Components        | shadcn/ui + custom      |
+| Internationalization | next-intl               |
+| Email                | React Email + Resend    |
+| Animations           | Framer Motion           |
+| Deployment           | Vercel                  |
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Opens at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command      | Action                  |
+| ------------ | ----------------------- |
+| `pnpm dev`   | Start dev server        |
+| `pnpm build` | Production build        |
+| `pnpm start` | Start production server |
+| `pnpm lint`  | Run ESLint              |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/[locale]/       # Route segments per locale (en, es)
+├── components/         # React components
+│   ├── ui/             # shadcn/ui primitives
+│   └── icons/          # SVG icon components
+├── data/               # Profile data (experience, skills, projects)
+├── i18n/               # Routing and locale detection config
+├── messages/           # Translation files (en.json, es.json)
+├── public/             # Static assets
+└── styles/             # Global CSS
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Internationalization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site supports English and Spanish. Locale is detected from the browser or URL prefix (`/en`, `/es`).
 
-## Deploy on Vercel
+- Translation files live in `messages/{locale}.json`
+- Components use `useTranslations("namespace")` from next-intl
+- The email template is currently server-side only and sends in Spanish
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To add a new locale:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create `messages/{locale}.json`
+2. Add the locale to `i18n/routing.ts`
+3. Add it to the locale switcher in `components/locale-switcher.tsx`
+
+## Contact
+
+- GitHub: [fco-gt](https://github.com/fco-gt)
+- LinkedIn: [Francisco Gutierrez](https://linkedin.com/in/fco-gt)
