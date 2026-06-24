@@ -19,8 +19,8 @@ export function LocaleSwitcher() {
   const pathname = usePathname();
   const [, startTransition] = useTransition();
   const languages = [
-    { code: "en", name: "English", flag: "🇺🇸" },
     { code: "es", name: "Español", flag: "🇪🇸" },
+    { code: "en", name: "English", flag: "🇺🇸" },
   ];
 
   const currentLang = languages.find((l) => l.code === locale);
@@ -35,7 +35,10 @@ export function LocaleSwitcher() {
           <span className="inline sm:hidden">{label}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[150px] backdrop-blur-xl bg-[#0c1609]/80 border-[#3c4b35] shadow-lg">
+      <DropdownMenuContent
+        align="end"
+        className="w-[150px] backdrop-blur-xl bg-[#0c1609]/80 border-[#3c4b35] shadow-lg"
+      >
         <DropdownMenuRadioGroup
           value={locale}
           onValueChange={(value) => {
