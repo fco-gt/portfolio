@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Missing required fields" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -54,13 +54,20 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(sanitizedData.email)) {
       return NextResponse.json(
         { error: "Invalid email address" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
-    const { data, error } = await resend.emails.send({
+    if (!process.env.CONTACT_EMAIL) {
+      return NextResponse.json(
+        { error: "Internal server error" },
+        { status: 500 },
+      );
+    }
+
+    const { error } = await resend.emails.send({
       from: "Portfolio Contact Form <onboarding@resend.dev>",
-      to: ["fco.gutierrez1227@gmail.com"],
+      to: [process.env.CONTACT_EMAIL],
       subject: `New Contact Form Message from ${sanitizedData.name}`,
       react: EmailTemplate({
         name: sanitizedData.name,
@@ -69,19 +76,16 @@ export async function POST(request: NextRequest) {
       }),
     });
 
-    console.log(data, error);
-    
-
     if (error) {
-      return Response.json({ error }, { status: 500 });
+      return NextResponse.json({ error }, { status: 500 });
     }
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("[v0] Contact form error:", error);
+    console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
