@@ -56,6 +56,11 @@ export const skills = [
     icon: DockerIcon,
   },
   {
+    name: "Next.js",
+    context: "Framework full-stack con renderizado híbrido y App Router",
+    icon: ReactIcon,
+  },
+  {
     name: "RabbitMQ",
     context: "Mensajería asíncrona y comunicación desacoplada entre servicios",
     icon: RabbitMQIcon,
@@ -76,37 +81,72 @@ export const skills = [
     icon: GinIcon,
   },
   {
-    name: "Seguridad",
-    context: "Implementación de OAuth2, JWT y control de acceso RBAC",
-    icon: SecurityIcon,
+    name: "React",
+    context: "Desarrollo de interfaces de usuario modernas con componentes reutilizables",
+    icon: ReactIcon,
   },
   {
-    name: "React Native",
-    context: "Desarrollo de aplicaciones móviles multiplataforma",
+    name: "Supabase",
+    context: "Backend-as-a-Service con PostgreSQL, autenticación y almacenamiento",
+    icon: PostgreSQLIcon,
+  },
+  {
+    name: "MongoDB",
+    context: "Base de datos NoSQL para aplicaciones flexibles y escalables",
+    icon: PostgreSQLIcon,
+  },
+  {
+    name: "Express",
+    context: "Framework backend minimalista para Node.js y APIs REST",
+    icon: NodeJsIcon,
+  },
+  {
+    name: "Astro",
+    context: "Framework web con cero JavaScript por defecto y rendimiento optimizado",
     icon: ReactIcon,
+  },
+  {
+    name: "Seguridad",
+    context: "Implementación de JWT, OAuth2 y control de acceso basado en roles",
+    icon: SecurityIcon,
   },
 ];
 
 export const experience = [
   {
     id: 1,
-    company: "Max and Beresford Orthodontists",
-    technologies: ["JavaScript", "HTML", "CSS", "Web Management"],
+    company: "Sellfyn SpA",
+    technologies: ["Next.js", "Supabase", "PostgreSQL", "TypeScript", "JWT"],
+    location: "Santiago, Chile",
+    modalities: ["Remoto", "Contrato por proyecto"],
   },
   {
     id: 2,
-    company: "Psiquesanacion",
-    technologies: ["Node.js", "Express", "MongoDB", "Cloudinary", "GitHub Actions"],
+    company: "Max and Beresford Orthodontists",
+    technologies: ["JavaScript", "HTML", "CSS", "Accessibility", "SEO"],
+    location: "Auckland, New Zealand",
+    modalities: ["Hibrido", "Consultoría"],
   },
   {
     id: 3,
-    company: "BrandBits Agency",
-    technologies: ["HTML", "JavaScript", "SEO", "Webhooks"],
+    company: "Psiquesanacion",
+    technologies: ["Node.js", "Express", "MongoDB", "Cloudinary", "Astro", "GitHub Actions"],
+    location: "Santiago, Chile",
+    modalities: ["Remoto", "Freelance"],
   },
   {
     id: 4,
-    company: "Agis",
-    technologies: ["Node.js", "WooCommerce API", "SQL", "Batch Processing"],
+    company: "BrandBits Agency",
+    technologies: ["HTML", "JavaScript", "APIs", "Webhooks"],
+    location: "Santiago, Chile",
+    modalities: ["Hibrido", "Practica profesional"],
+  },
+  {
+    id: 5,
+    company: "Otec AGIS SpA",
+    technologies: ["Node.js", "WooCommerce API", "SQL", "JWT", "CI/CD"],
+    location: "Santiago, Chile",
+    modalities: ["Remoto", "Contrato por proyecto"],
   },
 ];
 
@@ -117,13 +157,14 @@ export const projects = [
     technologies: ["Golang", "PostgreSQL", "Redis", "Middleware"],
     links: {
       github: "https://github.com/fco-gt/gopotency",
+      docs: "https://gopotency.vercel.app/"
     },
     featured: true,
   },
   {
     id: 2,
     image: "/autoattendance.png",
-    technologies: ["Golang", "RabbitMQ", "Clean Architecture", "Prometheus", "Grafana"],
+    technologies: ["Golang", "RabbitMQ", "Clean Architecture", "Gin", "Swagger"],
     links: {
       github: "https://github.com/fco-gt/quickattendance-go",
     },
@@ -134,8 +175,7 @@ export const projects = [
     image: "/autoattendance.png",
     technologies: ["Node.js", "Express", "PostgreSQL", "Prisma", "Microservices"],
     links: {
-      webApp: "https://github.com/fco-gt/autoattendance-frontend",
-      backend: "https://github.com/fco-gt/autoattendance-services",
+      github: "https://github.com/fco-gt/autoattendance-services",
     },
     featured: true,
   },
