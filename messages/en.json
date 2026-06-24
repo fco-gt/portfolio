@@ -1,78 +1,114 @@
 {
   "common": {
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "code": "Code",
+    "viewDetails": "Documentation",
+    "featuredProject": "Featured Project",
+    "repository": "Repository"
   },
   "header": {
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
     "contact": "Contact",
+    "hire": "Hire Me",
     "localeSwitcher": "Language"
   },
   "hero": {
-    "title": "Backend Developer (Go / Node.js)",
-    "availability": "Open to opportunities",
-    "tagline": "Go · Node.js · TypeScript · PostgreSQL · Redis · Docker · Microservices · Clean Architecture",
-    "bio": "Backend developer with 3+ years building production APIs and distributed systems. Specialized in Go and Node.js/TypeScript with measurable results: reduced API response times by 50%+, eliminated duplicate processing across high-throughput systems serving 50K+ daily operations, and architected multi-tenant platforms for 10+ organizations. Passionate about idempotency, observability, and clean architecture that scales.",
-    "cta": "Contact Me",
-    "download": "Download Resume"
+    "title": "Full Stack Developer (Backend Oriented — Node.js · TypeScript · Golang)",
+    "tagline": "Crafting <span class='text-neon italic'>Scalable</span> Digital Experiences",
+    "manifesto": "Read Manifesto",
+    "bio": "Full Stack developer oriented to high-performance backend architecture with <span class='text-on-surface font-semibold border-b border-neon/30'>Node.js</span>, <span class='text-on-surface font-semibold border-b border-neon/30'>TypeScript</span> and <span class='text-on-surface font-semibold border-b border-neon/30'>Golang</span>. Building the invisible foundations of the modern web.",
+    "cta": "View My Work",
+    "download": "Download Resume",
+    "scroll": "Scroll"
   },
   "experience": {
     "title": "Experience",
     "subtitle": "My professional journey",
+    "heading": "Laboral <span class='text-[#85967c] opacity-50'>Experience</span>",
     "achievements": "Key Achievements:",
     "item1": {
-      "position": "Web Developer",
-      "period": "Sep 2025 — Oct 2025",
-      "location": "Auckland, New Zealand",
-      "description": "Remote web developer for orthodontic clinic in Auckland, New Zealand.",
+      "position": "Full Stack Developer (Backend Oriented)",
+      "period": "Jan 2026 — May 2026",
+      "location": "Santiago, Chile",
+      "description": "Designed and developed a sales and inventory management SaaS using Next.js, Supabase, and PostgreSQL.",
       "achievements": [
-        "Redesigned clinic web presence improving page load speed by 40% and mobile usability scores from 65 to 92",
-        "Delivered 15+ web updates in a 6-week sprint across NZ/CL time zones with zero critical bugs"
+        "Defined the initial product stack prioritizing development speed, low operational cost, and maintainability",
+        "Optimized PostgreSQL/Supabase queries and data flows, reducing load times from ~3s to under 0.5s",
+        "Implemented JWT authentication, route protection, and secure cookies in Next.js",
+        "Integrated Transbank OneClick Mall for subscriptions and recurring payment automation"
       ]
     },
     "item2": {
-      "position": "Backend Developer",
-      "period": "Jun 2025 — Aug 2025",
-      "location": "Remote (Santiago, Chile)",
-      "description": "Designed and implemented the API core and content management system.",
+      "position": "Web Developer (On-site Consultancy)",
+      "period": "Sep 2025 — Oct 2025",
+      "location": "Auckland, New Zealand",
+      "description": "On-site consultancy — gathered requirements directly with the client's IT team and management, operating fully autonomously in English.",
       "achievements": [
-        "Architected REST API core reducing initial response time by 50% via optimized middleware",
-        "Implemented JWT RBAC with 6 permission levels across 3 user roles and 20+ endpoints",
-        "Integrated Cloudinary CDN cutting media load times by 70%",
-        "Built CI/CD pipeline reducing deployment time from 30 min to 8 min"
+        "On-site consultancy in Auckland operating completely autonomously in English with direct client interaction",
+        "Developed UI improvements prioritizing accessibility, achieving a 15% increase in user interaction",
+        "Optimized frontend achieving a 25% improvement in Core Web Vitals and asset load times"
       ]
     },
     "item3": {
-      "position": "Web Developer (Intern)",
-      "period": "Feb 2025 — May 2025",
+      "position": "Full Stack Developer (Backend Oriented)",
+      "period": "Jun 2025 — Aug 2025",
       "location": "Santiago, Chile",
-      "description": "Supported the maintenance of web platforms and integration of marketing tools.",
+      "description": "Designed and implemented a content management and publishing system with Node.js, MongoDB, and Astro.",
       "achievements": [
-        "Maintained 5+ client websites concurrently with 99.9% uptime",
-        "Integrated 3 marketing APIs (Mailchimp, Google Analytics, Meta Pixel) automating cross-platform sync",
-        "Built webhook automation saving 10+ hours/month in manual reporting"
+        "Designed REST APIs for decoupled consumption from an Astro frontend",
+        "Integrated Cloudinary for optimized image storage, transformation, and delivery",
+        "Implemented JWT-based authentication and access control for administrative operations",
+        "Set up automated deployment pipelines with GitHub Actions for CI/CD standardization",
+        "Built the Astro frontend achieving 90+/100 Lighthouse scores in performance and SEO"
       ]
     },
     "item4": {
-      "position": "Backend Developer",
-      "period": "Sep 2024 — Jan 2025",
-      "location": "Remote (Santiago, Chile)",
-      "description": "Specialized in critical integrations and backend performance optimization.",
+      "position": "Professional Internship — Web Development",
+      "period": "Feb 2025 — May 2025",
+      "location": "Santiago, Chile",
+      "description": "Participated in maintenance and improvement of existing web platforms, collaborating on new features and bug fixes.",
       "achievements": [
-        "Implemented WooCommerce sync engine handling 50K+ daily ops with idempotency guarantees — zero duplicates in 3 months",
-        "Reduced incident response time from 4h to 30min via monitoring",
-        "Optimized 10+ SQL queries reducing avg execution from 2.3s to 180ms"
+        "Maintained and improved existing web functionalities, collaborating on new features and bug fixes",
+        "Integrated third-party APIs and webhooks to automate internal flows and data synchronization",
+        "Worked alongside design and marketing teams on product-aligned feature implementation"
+      ]
+    },
+    "item5": {
+      "position": "Full Stack Developer (Backend Oriented)",
+      "period": "Sep 2024 — Jan 2025",
+      "location": "Santiago, Chile",
+      "description": "Implemented backend integrations with WooCommerce REST API for product, order, and user synchronization.",
+      "achievements": [
+        "Implemented WooCommerce REST API integrations for product, order, and user sync between services",
+        "Developed JWT-protected endpoints for authentication and authorization flows in internal integrations",
+        "Optimized sync processes using pagination, batching, and retry strategies for data consistency",
+        "Set up CI/CD pipelines to automate deployments and reduce operational errors from manual processes"
       ]
     }
   },
+  "about": {
+    "label": "About Me",
+    "heading": "Behind the <br /><span class='text-[#39ff14]'>code.</span>",
+    "coreStack": "Core Stack",
+    "currentFocus": "Current Focus",
+    "focusValue": "Distributed Systems &amp; AI Orchestration",
+    "paragraph1": "My name is Francisco, though in the dev ecosystem I go by <span class='text-[#39ff14] font-semibold'>fco-gt</span>. I started programming at 15 with <span class='text-[#dae6d0] font-semibold'>Node.js</span> and haven't stopped since. Today I work as a <span class='text-[#dae6d0] font-semibold'>Full Stack Developer</span> focused on Backend and Systems Architecture.",
+    "paragraph2": "I've worked on early-stage projects where I had the opportunity to define architectures from scratch, make technology design decisions, and optimize APIs and databases to scale with hundreds of thousands of records.",
+    "paragraph3": "I work primarily with <span class='text-[#dae6d0] font-semibold'>Node.js</span> as my main stack, but I also have experience building with <span class='text-[#dae6d0] font-semibold'>Golang</span> and frontend frameworks like <span class='text-[#dae6d0] font-semibold'>Next.js</span>, React, and Tailwind CSS. I'm also experienced with both relational and NoSQL databases: MySQL, PostgreSQL, MongoDB, and Redis."
+  },
   "skills": {
     "title": "Skills & Experience",
-    "subtitle": "Technologies and tools I use to build exceptional digital experiences."
+    "subtitle": "Technologies and tools I use to build exceptional digital experiences.",
+    "label": "Tech Stack",
+    "heading": "Technologies I <span class='text-[#39ff14]'>Master</span>",
+    "currentFocus": "Current Focus",
+    "focusValue": "Distributed Systems &amp; AI Orchestration"
   },
   "projects": {
-    "title": "Featured Projects",
+    "title": "Featured <span class='text-[#85967c] opacity-50'>Projects</span>",
     "subtitle": "A selection of projects showcasing my technical skills and problem-solving approach.",
     "featured": "Featured",
     "code": "Code",
@@ -80,6 +116,10 @@
     "backend": "Backend",
     "mobileApp": "Mobile App",
     "liveDemo": "Live Demo",
+    "ctaTitle": "Ready to build the future?",
+    "ctaText": "Currently accepting select freelance opportunities for high-impact engineering projects. Let\u2019s discuss your architectural needs.",
+    "ctaButton": "Get in Touch",
+    "ctaDownload": "Download CV",
     "item1": {
       "title": "GoPotency — Idempotency in Go",
       "description": "Open-source Go middleware guaranteeing idempotency for HTTP endpoints. Supports body-hash and header-based key strategies with PostgreSQL or Redis backends. Designed for zero-duplicate guarantees in payment, webhook, and event-processing systems.",
@@ -128,28 +168,34 @@
   "contact": {
     "title": "Let's Work Together",
     "subtitle": "I'm always interested in hearing about new projects and opportunities. Don't hesitate to reach out!",
+    "available": "Available for Work",
+    "headline": "Let's build something <span class='text-[#39ff14]'>extraordinary</span>",
+    "connect": "Connect via",
+    "directEmail": "Direct Email",
+    "baseOps": "Based in",
+    "response": "Estimated response: < 24h",
     "nameLabel": "Name",
     "namePlaceholder": "Your name",
     "emailLabel": "Email",
-    "emailPlaceholder": "your.email@example.com",
+    "emailPlaceholder": "you@example.com",
     "messageLabel": "Message",
-    "messagePlaceholder": "Tell me about your project...",
-    "sending": "Sending...",
+    "messagePlaceholder": "Tell me about your project…",
+    "sending": "Sending…",
     "send": "Send Message",
     "success": "Message sent successfully!",
     "error": "Error sending message. Please try again."
   },
   "footer": {
-    "copyright": "All rights reserved.",
-    "title": "Backend Developer (Golang / Node.js)"
+    "copyright": "Some rights reserved.",
+    "title": "Full Stack Developer (Node.js · TypeScript · Golang)"
   },
   "metadata": {
-    "title": "Francisco Gutierrez — Full Stack Developer",
-    "description": "Full Stack Developer specialized in TypeScript, React and Next.js. I build scalable, high-performance web applications with modern technologies.",
-    "ogTitle": "Francisco Gutierrez — Full Stack Developer",
-    "ogDescription": "Full Stack Developer specialized in TypeScript, React and Next.js. I build scalable, high-performance web applications with modern technologies.",
+    "title": "Francisco Gutierrez — Full Stack Developer (Node.js · TypeScript · Golang)",
+    "description": "Full Stack Developer oriented to backend with Node.js, TypeScript and Golang. I build scalable, high-performance systems with modern architectures.",
+    "ogTitle": "Francisco Gutierrez — Full Stack Developer (Node.js · TypeScript · Golang)",
+    "ogDescription": "Full Stack Developer oriented to backend with Node.js, TypeScript and Golang. I build scalable, high-performance systems with modern architectures.",
     "ogSiteName": "Francisco Gutierrez Portfolio",
-    "twitterTitle": "Francisco Gutierrez — Full Stack Developer",
-    "twitterDescription": "Full Stack Developer specialized in TypeScript, React and Next.js. I build scalable, high-performance web applications with modern technologies."
+    "twitterTitle": "Francisco Gutierrez — Full Stack Developer (Node.js · TypeScript · Golang)",
+    "twitterDescription": "Full Stack Developer oriented to backend with Node.js, TypeScript and Golang. I build scalable, high-performance systems with modern architectures."
   }
 }
